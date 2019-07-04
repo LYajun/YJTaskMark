@@ -7,23 +7,21 @@
 //
 
 #import "YJViewController.h"
-
+#import "TestEngineViewController.h"
 @interface YJViewController ()
 
 @end
 
 @implementation YJViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    TestEngineViewController *testVC = [[TestEngineViewController alloc] init];
+    [self.navigationController pushViewController:testVC animated:YES];
 }
 
 @end
