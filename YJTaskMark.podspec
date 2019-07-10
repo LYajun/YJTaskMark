@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YJTaskMark'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = '基于声通的语音评测工具'
 
 
@@ -28,8 +28,8 @@ TODO: Add long description of the pod here.
   s.subspec 'kuyou' do |kouyu|
     kouyu.source_files = 'YJTaskMark/Classes/kouyu/**/*'
     kouyu.vendored_libraries = 'YJTaskMark/Classes/Lib/*.a'
-    s.frameworks  = 'Accelerate','Foundation','CoreGraphics','Security','SystemConfiguration','CFNetwork','AudioToolbox'
-    s.libraries   = 'stdc++.6.0.9','z.1'
+    kouyu.frameworks  = 'Accelerate','Foundation','CoreGraphics','Security','SystemConfiguration','CFNetwork','AudioToolbox'
+    kouyu.libraries   = 'stdc++.6.0.9','z.1'
   end
 
  s.subspec 'Util' do |util|
