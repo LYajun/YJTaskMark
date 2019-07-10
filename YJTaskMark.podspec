@@ -24,7 +24,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
-
+  s.resources = 'YJTaskMark/Classes/YJTaskMark.bundle'
+  
   s.subspec 'kuyou' do |kouyu|
     kouyu.source_files = 'YJTaskMark/Classes/kouyu/**/*'
     kouyu.vendored_libraries = 'YJTaskMark/Classes/Lib/*.a'
