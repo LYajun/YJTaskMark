@@ -67,7 +67,7 @@
 		BAF43A4522CE107A004AF227 /* TestEngineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEngineViewController.m; sourceTree = "<group>"; };
 		BAF43A4622CE107A004AF227 /* TestEngineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEngineViewController.h; sourceTree = "<group>"; };
 		CB36BAC7D645CF5FF18DE239 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		CECAF529CAE1B84D4195DCDA /* YJTaskMark.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YJTaskMark.podspec; path = ../YJTaskMark.podspec; sourceTree = "<group>"; };
+		CECAF529CAE1B84D4195DCDA /* YJTaskMark.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YJTaskMark.podspec; path = ../YJTaskMark.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EA1A77904D59515D80C8A384 /* Pods_YJTaskMark_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YJTaskMark_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
