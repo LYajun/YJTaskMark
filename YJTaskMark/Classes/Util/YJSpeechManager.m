@@ -150,7 +150,7 @@ static CGFloat kSoundOffset = 20;
         [self showResult:@"网络未连接"];
         return;
     }
-    if ([YJNetMonitoring shareMonitoring].networkCanUseState == 1) {
+    if ([YJNetMonitoring shareMonitoring].networkCanUseState != 1) {
         [self showResult:@"网络异常"];
         return;
     }
