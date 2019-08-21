@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YJTaskMark'
-  s.version          = '1.0.7'
+  s.version          = '1.0.8'
   s.summary          = '基于声通的语音评测工具'
 
 
