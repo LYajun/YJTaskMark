@@ -109,7 +109,7 @@ static CGFloat kSoundOffset = 20;
     KYStartEngineConfig *startEngineConfig = [[KYStartEngineConfig alloc] init];
     startEngineConfig.appKey = cSpeechAppkey;
     startEngineConfig.secretKey = cSpeechSecretkey;
-    
+    startEngineConfig.vadEnable = YES;
     __weak typeof(self) weakSelf = self;
     //初始化引擎
     [[KYTestEngine sharedInstance] initEngine:KY_CloudEngine startEngineConfig:startEngineConfig finishBlock:^(BOOL isSuccess) {

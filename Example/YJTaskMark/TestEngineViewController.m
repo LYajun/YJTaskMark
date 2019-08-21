@@ -55,6 +55,9 @@
             }
         }
     }];
+    [[YJSpeechManager defaultManager] speechEngineSoundIntensity:^(CGFloat sound, CGFloat silentTime) {
+        NSLog(@"sound:%f",sound);
+    }];
     self.markType = YJSpeechMarkTypeWord;
 }
 - (IBAction)segment:(UISegmentedControl *)sender {
