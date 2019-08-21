@@ -25,7 +25,7 @@ static NSString *cMicAuthorization = @"micAuthorization";
 static NSString *cSpeechAppkey = @"148757611600000f";
 static NSString *cSpeechSecretkey = @"2d5356fe1d5f3f13eba43ca48c176647";
 
-static CGFloat kSoundOffset = 20;
+static CGFloat kSoundOffset = 10;
 
 
 
