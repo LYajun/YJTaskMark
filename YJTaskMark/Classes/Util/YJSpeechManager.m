@@ -268,11 +268,11 @@ static CGFloat kSoundOffset = 10;
                 model.errorMsg = result;
                 model.totalScore = 0;
             }
+            weakSelf.isMarking = NO;
+            weakSelf.isEndMark = NO;
             if (weakSelf.speechResultBlock) {
                 weakSelf.speechResultBlock(model);
             }
-            weakSelf.isMarking = NO;
-            weakSelf.isEndMark = NO;
         });
     }
 }
