@@ -15,6 +15,7 @@
 {
     [[YJNetMonitoring shareMonitoring] startNetMonitoring];
     [[YJSpeechManager defaultManager] initEngine];
+     [[YJNetMonitoring shareMonitoring] checkNetCanUseWithComplete:nil];
     return YES;
 }
 
