@@ -35,11 +35,11 @@ PODS:
     - AFNetworking
     - Reachability
     - YJExtensions
-  - YJTaskMark (1.0.7):
-    - YJTaskMark/kuyou (= 1.0.7)
-    - YJTaskMark/Util (= 1.0.7)
-  - YJTaskMark/kuyou (1.0.7)
-  - YJTaskMark/Util (1.0.7):
+  - YJTaskMark (1.1.2):
+    - YJTaskMark/kuyou (= 1.1.2)
+    - YJTaskMark/Util (= 1.1.2)
+  - YJTaskMark/kuyou (1.1.2)
+  - YJTaskMark/Util (1.1.2):
     - LGAlertHUD
     - YJExtensions
     - YJNetManager
@@ -70,7 +70,7 @@ SPEC CHECKSUMS:
   TFHpple: a916fe0799eb30aa29b2670d14d5868cdd3a5b81
   YJExtensions: f9d60e5a4d53a044a67befe45b996f66bfdaec9d
   YJNetManager: 0f585c690240e050b225de1dd543c148be70fe5b
-  YJTaskMark: 7e5c60d43e638bf478636066856f22ddca473861
+  YJTaskMark: 2c229dddeb6b62221c3d7003d540f188086d0d7c
 
 PODFILE CHECKSUM: d583c556103018c17b71810568bf08a1997b9276
 
