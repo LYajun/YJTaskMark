@@ -46,7 +46,9 @@
 
 #pragma mark - UIDocumentPickerDelegate
 - (void)documentPicker:(UIDocumentPickerViewController *)controller didPickDocumentsAtURLs:(NSArray<NSURL *> *)urls {
-    NSString *voiceUrl = urls.firstObject.absoluteString;
+    NSURL *voiceU = urls.firstObject;
+    NSString *voiceUrl = urls.firstObject.relativePath;
+    NSString *voicePath = voiceUrl.stringByStandardizingPath;
     voiceUrl = [voiceUrl stringByReplacingOccurrencesOfString:@"file://" withString:@""];
     [[YJSpeechManager defaultManager] startEngineAtRefText:voiceUrl markType:YJSpeechMarkTypeASR fileASR:YES];
 }

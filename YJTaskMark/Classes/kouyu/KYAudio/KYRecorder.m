@@ -92,29 +92,34 @@
     [[NSFileManager defaultManager] createFileAtPath:filePath contents:nil attributes:nil];
 
     self.fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
-    WavHeader header;
+    if(self.fileHandle == nil) {
+        NSLog(@"Open of %@ for writing failed!", filePath);
+    } else {
+       
+            WavHeader header;
 
-    int sample_rate = KYRECORDER_SAMPLERATE;
-    int channels = KYRECORDER_CHANNELS;
-    int bits_per_sample = KYRECORDER_BITS_PER_SAMPLE;
+	    int sample_rate = KYRECORDER_SAMPLERATE;
+	    int channels = KYRECORDER_CHANNELS;
+	    int bits_per_sample = KYRECORDER_BITS_PER_SAMPLE;
 
-    strncpy(header.riff, "RIFF", 4);
-    header.riff_length = 0;
-    strncpy(header.riff_type, "WAVE", 4);
-    strncpy(header.fmt, "fmt ", 4);
-    header.fmt_size = 16;
-    header.fmt_code = 1;
-    header.fmt_channel = channels;
-    header.fmt_sampleRate = sample_rate;
-    header.fmt_bytePerSec = sample_rate * bits_per_sample * channels / 8;
-    header.fmt_blockAlign = bits_per_sample * channels / 8;
-    header.fmt_bitPerSample = bits_per_sample;
-    strncpy(header.data, "data", 4);
-    header.dataSize = 0;
+	    strncpy(header.riff, "RIFF", 4);
+	    header.riff_length = 0;
+	    strncpy(header.riff_type, "WAVE", 4);
+	    strncpy(header.fmt, "fmt ", 4);
+	    header.fmt_size = 16;
+	    header.fmt_code = 1;
+	    header.fmt_channel = channels;
+	    header.fmt_sampleRate = sample_rate;
+	    header.fmt_bytePerSec = sample_rate * bits_per_sample * channels / 8;
+	    header.fmt_blockAlign = bits_per_sample * channels / 8;
+	    header.fmt_bitPerSample = bits_per_sample;
+	    strncpy(header.data, "data", 4);
+	    header.dataSize = 0;
 
-    NSData *data = [NSData dataWithBytes:&header length:44];
+	    NSData *data = [NSData dataWithBytes:&header length:44];
 
-    [self.fileHandle writeData:data];
+	    [self.fileHandle writeData:data];
+  }
 }
 
 - (void)resetRecorder {
@@ -148,11 +153,18 @@
 }
 
 static void audioQueueCallback(void * userdata, AudioQueueRef audioQueue, AudioQueueBufferRef buffer, const AudioTimeStamp *startTime, UInt32 packetNum, const AudioStreamPacketDescription *packetDesc) {
-    
-    KYRecorder *recorder = (__bridge KYRecorder *)userdata;
-    
+    if (!userdata) {
+		return;
+	}
+	KYRecorder *recorder;
+    if(packetNum > 0) {
+        recorder = (__bridge KYRecorder *)userdata;
+    }
+    if(!recorder) {
+        return;
+    }
     if (buffer->mAudioDataByteSize > 0) {
-        if (recorder.recorderBlock) {
+        if (recorder && recorder.recorderBlock) {
             recorder.recorderBlock(recorder.engine, buffer->mAudioData, buffer->mAudioDataByteSize);
         }
         
@@ -161,16 +173,17 @@ static void audioQueueCallback(void * userdata, AudioQueueRef audioQueue, AudioQ
         [recorder.fileHandle writeData:data];
     }
     
-    if (recorder.isRunning) {
+    if (recorder && recorder.isRunning) {
         AudioQueueEnqueueBuffer(recorder.audioQueue, buffer, 0, NULL);
     } else {
-        if (recorder.fileHandle) {
+        if (recorder && recorder.fileHandle) {
             
             NSInteger fileSize = 0;
             NSInteger riffDataSize = 0;
             NSInteger dataSize = 0;
             
-            fileSize = [[recorder.fileHandle readDataToEndOfFile] length];
+            //fileSize = [[recorder.fileHandle readDataToEndOfFile] length];
+	    fileSize = [[NSData dataWithContentsOfFile:recorder.wavPath] length];
             riffDataSize = fileSize - 4;
             dataSize = fileSize - 44;
             
@@ -184,7 +197,9 @@ static void audioQueueCallback(void * userdata, AudioQueueRef audioQueue, AudioQ
             recorder.fileHandle = nil;
 
         }
-        AudioQueueFreeBuffer(recorder.audioQueue, buffer);
+	if(recorder){
+       		 AudioQueueFreeBuffer(recorder.audioQueue, buffer);
+	}
     }
 }
 

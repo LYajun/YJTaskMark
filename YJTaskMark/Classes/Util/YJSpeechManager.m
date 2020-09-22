@@ -34,6 +34,7 @@ static CGFloat kSoundOffset = 10;
 @property (nonatomic,assign) BOOL isInit;
 @property (nonatomic,assign) YJSpeechMarkType markType;
 @property (nonatomic,copy) NSString *refText;
+@property (nonatomic,assign) BOOL fileASR;
 @property(nonatomic,strong) YJSpeechTimer *timer;
 @property (nonatomic,assign) CGFloat timeCount;
 @property(nonatomic,strong) YJSpeechTimer *timeoutTimer;
@@ -103,7 +104,7 @@ static CGFloat kSoundOffset = 10;
 - (void)initEngine{
     
     
-    
+
     self.isInit = NO;
     //配置初始化引擎参数
     KYStartEngineConfig *startEngineConfig = [[KYStartEngineConfig alloc] init];
@@ -136,6 +137,7 @@ static CGFloat kSoundOffset = 10;
    if (self.speechStartBlock) {
        self.speechStartBlock();
    }
+    self.fileASR = fileASR;
     self.markType = markType;
     self.refText = refText;
     self.isMarking = YES;
@@ -220,6 +222,9 @@ static CGFloat kSoundOffset = 10;
         dispatch_async(dispatch_get_main_queue(), ^{
             [LGAlert hide];
             YJSpeechResultModel *model = [[YJSpeechResultModel alloc] init];
+            if (weakSelf.fileASR) {
+                model.audioPath = weakSelf.refText;
+            }
             if ([result containsString:@"tokenId"]) {
                 NSData *rdata = [result dataUsingEncoding:NSUTF8StringEncoding];
                 NSDictionary *resultDic = [NSJSONSerialization JSONObjectWithData:rdata options:NSJSONReadingMutableLeaves  error:nil];

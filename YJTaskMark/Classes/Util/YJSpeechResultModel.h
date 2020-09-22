@@ -11,6 +11,8 @@
 @interface YJSpeechResultModel : NSObject
 /** 编号 */
 @property (nonatomic,copy) NSString *speechID;
+/** 音频文件识别的音频路径 */
+@property (nonatomic,copy) NSString *audioPath;
 /** 总分 */
 @property (nonatomic,assign) float totalScore;
 /** 发音得分 */
