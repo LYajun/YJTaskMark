@@ -97,9 +97,11 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/LGAlertHUD/LGAlertHUD/LGAlertHUD.bundle"
   install_resource "${PODS_ROOT}/SingSoundSDK/singsoundSDK/bundle/SingSound.Bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/LGAlertHUD/LGAlertHUD/LGAlertHUD.bundle"
   install_resource "${PODS_ROOT}/SingSoundSDK/singsoundSDK/bundle/SingSound.Bundle"
 fi
 

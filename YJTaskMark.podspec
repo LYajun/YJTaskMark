@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YJTaskMark'
-  s.version          = '2.0'
+  s.version          = '2.0.1'
   s.summary          = '基于先声的语音评测工具'
 
 
@@ -25,7 +25,6 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
   s.source_files = 'YJTaskMark/Classes/*.{h,m}'
-  s.static_framework  = true
 
   s.dependency 'YJExtensions'
   s.dependency 'AFNetworking','3.2.1'

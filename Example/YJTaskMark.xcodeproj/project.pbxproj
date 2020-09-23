@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2804480BFBF3E0E4CBC998CD /* Pods_YJTaskMark_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1A77904D59515D80C8A384 /* Pods_YJTaskMark_Example.framework */; };
+		08DB711B9D4B4AC9B5B52F21 /* libPods-YJTaskMark_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F74361C225A2550B72A7BA70 /* libPods-YJTaskMark_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -68,7 +68,7 @@
 		BAF43A4622CE107A004AF227 /* TestEngineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEngineViewController.h; sourceTree = "<group>"; };
 		CB36BAC7D645CF5FF18DE239 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CECAF529CAE1B84D4195DCDA /* YJTaskMark.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YJTaskMark.podspec; path = ../YJTaskMark.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		EA1A77904D59515D80C8A384 /* Pods_YJTaskMark_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YJTaskMark_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74361C225A2550B72A7BA70 /* libPods-YJTaskMark_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YJTaskMark_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				2804480BFBF3E0E4CBC998CD /* Pods_YJTaskMark_Example.framework in Frameworks */,
+				08DB711B9D4B4AC9B5B52F21 /* libPods-YJTaskMark_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +134,7 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				EA1A77904D59515D80C8A384 /* Pods_YJTaskMark_Example.framework */,
+				F74361C225A2550B72A7BA70 /* libPods-YJTaskMark_Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,7 +209,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				3D27C1811C28521A8B06784B /* [CP] Embed Pods Frameworks */,
 				E79D809B9C4F3944B3134D45 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -301,38 +300,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D27C1811C28521A8B06784B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YJTaskMark_Example/Pods-YJTaskMark_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/LGAlertHUD/LGAlertHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/LGLog/LGLog.framework",
-				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/YJExtensions/YJExtensions.framework",
-				"${BUILT_PRODUCTS_DIR}/YJNetManager/YJNetManager.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGAlertHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGLog.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YJExtensions.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YJNetManager.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YJTaskMark_Example/Pods-YJTaskMark_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		58F02D33F100577F1F9810AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,10 +329,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YJTaskMark_Example/Pods-YJTaskMark_Example-resources.sh",
+				"${PODS_ROOT}/LGAlertHUD/LGAlertHUD/LGAlertHUD.bundle",
 				"${PODS_ROOT}/SingSoundSDK/singsoundSDK/bundle/SingSound.Bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LGAlertHUD.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SingSound.Bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

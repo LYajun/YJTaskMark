@@ -1,0 +1,1 @@
+../../../LGLog/LGLog/LGLogManager/LGLogManager.h
