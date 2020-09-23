@@ -90,6 +90,6 @@
 }
 
 - (void)playbackPressed:(UIButton *) btn{
-    [[YJSpeechManager defaultManager] playback];
+   
 }
 @end

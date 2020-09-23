@@ -14,47 +14,69 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - LGAlertHUD (1.0.5):
-    - LGAlertHUD/AlertView (= 1.0.5)
+  - LGAlertHUD (1.1.4):
+    - LGAlertHUD/AlertView (= 1.1.4)
+    - LGAlertHUD/AnswerAlertView (= 1.1.4)
+    - LGAlertHUD/YJSheetView (= 1.1.4)
     - Masonry
     - YJExtensions
-  - LGAlertHUD/AlertView (1.0.5):
+  - LGAlertHUD/AlertView (1.1.4):
     - Masonry
     - YJExtensions
+  - LGAlertHUD/AnswerAlertView (1.1.4):
+    - Masonry
+    - YJExtensions
+  - LGAlertHUD/YJSheetView (1.1.4):
+    - Masonry
+    - YJExtensions
+  - LGLog (1.0.2):
+    - LGLog/LGLogManager (= 1.0.2)
+    - LGLog/YJCocoaLumberjack (= 1.0.2)
+  - LGLog/LGLogManager (1.0.2):
+    - LGLog/YJCocoaLumberjack
+  - LGLog/YJCocoaLumberjack (1.0.2)
   - Masonry (1.1.0)
+  - MJExtension (3.2.2)
   - Reachability (3.2)
-  - TFHpple (2.0.0)
-  - YJExtensions (1.1.0):
-    - YJExtensions/Foundation (= 1.1.0)
-    - YJExtensions/UIKit (= 1.1.0)
-  - YJExtensions/Foundation (1.1.0):
-    - TFHpple
-  - YJExtensions/UIKit (1.1.0):
+  - SingSoundSDK (0.6.1)
+  - YJExtensions (1.2.9):
+    - YJExtensions/Foundation (= 1.2.9)
+    - YJExtensions/UIKit (= 1.2.9)
+    - YJExtensions/YJEGumbo (= 1.2.9)
+    - YJExtensions/YJEHpple (= 1.2.9)
+  - YJExtensions/Foundation (1.2.9):
+    - YJExtensions/YJEHpple
+  - YJExtensions/UIKit (1.2.9):
     - YJExtensions/Foundation
-  - YJNetManager (1.0.5):
+  - YJExtensions/YJEGumbo (1.2.9):
+    - YJExtensions/YJEGumbo/src (= 1.2.9)
+  - YJExtensions/YJEGumbo/src (1.2.9)
+  - YJExtensions/YJEHpple (1.2.9)
+  - YJNetManager (1.2.2):
     - AFNetworking
+    - LGLog
     - Reachability
     - YJExtensions
-  - YJTaskMark (1.1.4):
-    - YJTaskMark/kuyou (= 1.1.4)
-    - YJTaskMark/Util (= 1.1.4)
-  - YJTaskMark/kuyou (1.1.4)
-  - YJTaskMark/Util (1.1.4):
+  - YJTaskMark (2.0):
     - LGAlertHUD
+    - MJExtension
+    - SingSoundSDK
     - YJExtensions
     - YJNetManager
-    - YJTaskMark/kuyou
 
 DEPENDENCIES:
   - YJTaskMark (from `../`)
 
 SPEC REPOS:
+  https://pt.singsound.com:10081/singsound-public/SingSoundSDKCocoaPodRepo.git:
+    - SingSoundSDK
   trunk:
     - AFNetworking
     - LGAlertHUD
+    - LGLog
     - Masonry
+    - MJExtension
     - Reachability
-    - TFHpple
     - YJExtensions
     - YJNetManager
 
@@ -64,14 +86,16 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  LGAlertHUD: a3ad8dc6ba68a76aa3a44ea8aff36a6340b9396f
+  LGAlertHUD: d85ccbabb15c09cca6e96850caf30a9fdf23dc48
+  LGLog: a58e542c6c99755d1b8eca492b2acf70a3115731
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  TFHpple: a916fe0799eb30aa29b2670d14d5868cdd3a5b81
-  YJExtensions: f9d60e5a4d53a044a67befe45b996f66bfdaec9d
-  YJNetManager: 0f585c690240e050b225de1dd543c148be70fe5b
-  YJTaskMark: e108d779901ba8b39f87767609999b4a6fd003e6
+  SingSoundSDK: f839d2022b134e800e5d3e06c6a5f1aa63db2562
+  YJExtensions: b02c849ffe62650cec815854c9362031d3034650
+  YJNetManager: 2de45698355adda77563015b1bf884d468a688db
+  YJTaskMark: 37ad5d8a8f97cddc178ee0b70af74fa3aad635f7
 
-PODFILE CHECKSUM: d583c556103018c17b71810568bf08a1997b9276
+PODFILE CHECKSUM: 4667774dd1fe9cef72af6b225c434f1becb1c312
 
 COCOAPODS: 1.9.2

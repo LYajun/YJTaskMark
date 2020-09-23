@@ -9,6 +9,7 @@
 #import "YJNetMonitoring.h"
 #import <Reachability/Reachability.h>
 
+
 #define kYJNetMonitoringUrlToCheckNetStatus @"http://www.stkouyu.com/"
 @interface YJNetMonitoring ()
 @property (nonatomic) Reachability *hostReachability;
@@ -35,7 +36,9 @@
 }
 - (void) reachabilityChanged:(NSNotification *)note{
     Reachability* curReach = [note object];
-    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    if (![curReach isKindOfClass:[Reachability class]]) {
+        return;
+    }
     [self updateInterfaceWithReachability:curReach];
 }
 - (void)updateInterfaceWithReachability:(Reachability *)reachability{

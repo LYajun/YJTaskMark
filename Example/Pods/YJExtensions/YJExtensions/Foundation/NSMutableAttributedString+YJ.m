@@ -32,6 +32,11 @@
     paragraphStyle.lineSpacing = lineSpacing;
     [self addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, self.length)];
 }
+- (void)yj_setAlignment:(NSTextAlignment)alignment{
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+   paragraphStyle.alignment = alignment;
+   [self addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, self.length)];
+}
 - (void)yj_setChineseForegroundColor:(UIColor *)color font:(CGFloat)font{
     for (int i=0; i<self.string.length; i++) {
         unichar ch = [self.string characterAtIndex:i];
@@ -46,6 +51,16 @@
     for (int i=0; i<self.string.length; i++) {
         unichar ch = [self.string characterAtIndex:i];
         if (0x0030 <= ch  && ch <= 0x0039) {
+            [self addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(i, 1)];
+            [self addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:font] range:NSMakeRange(i, 1)];
+        }
+    }
+}
+
+- (void)yj_setSubChar:(NSString *)subStr foregroundColor:(UIColor *)color font:(CGFloat)font{
+    for (int i=0; i<self.string.length; i++) {
+        NSString *ch = [self.string substringWithRange:NSMakeRange(i, 1)];
+        if ([ch isEqualToString:subStr]) {
             [self addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(i, 1)];
             [self addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:font] range:NSMakeRange(i, 1)];
         }

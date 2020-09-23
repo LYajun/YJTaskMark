@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YJTaskMark'
-  s.version          = '1.1.5'
-  s.summary          = '基于声通的语音评测工具'
+  s.version          = '2.0'
+  s.summary          = '基于先声的语音评测工具'
 
 
   s.description      = <<-DESC
@@ -22,23 +22,13 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/LYajun/YJTaskMark.git', :tag => s.version.to_s }
 
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.requires_arc = true
-  s.resources = 'YJTaskMark/Classes/YJTaskMark.bundle'
-  
-  s.subspec 'kuyou' do |kouyu|
-    kouyu.source_files = 'YJTaskMark/Classes/kouyu/**/*'
-    kouyu.vendored_libraries = 'YJTaskMark/Classes/Lib/*.a'
-    kouyu.frameworks  = 'Accelerate','Foundation','CoreGraphics','Security','SystemConfiguration','CFNetwork','AudioToolbox'
-    kouyu.libraries   = 'z.1'
-  end
-
- s.subspec 'Util' do |util|
-    util.source_files = 'YJTaskMark/Classes/Util/**/*'
-    util.dependency 'YJTaskMark/kuyou'
-    util.dependency 'YJExtensions'
-    util.dependency 'YJNetManager'
-    util.dependency 'LGAlertHUD'
- end
-  
+  s.source_files = 'YJTaskMark/Classes/*.{h,m}'
+   s.static_framework  = true
+  s.dependency 'YJExtensions'
+  s.dependency 'YJNetManager'
+  s.dependency 'LGAlertHUD'
+  s.dependency 'MJExtension'
+  s.dependency 'SingSoundSDK'
 end

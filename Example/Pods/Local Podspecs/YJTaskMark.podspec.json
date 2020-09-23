@@ -1,7 +1,7 @@
 {
   "name": "YJTaskMark",
-  "version": "1.1.4",
-  "summary": "基于声通的语音评测工具",
+  "version": "2.0",
+  "summary": "基于先声的语音评测工具",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/LYajun/YJTaskMark",
   "license": {
@@ -13,46 +13,29 @@
   },
   "source": {
     "git": "https://github.com/LYajun/YJTaskMark.git",
-    "tag": "1.1.4"
+    "tag": "2.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "requires_arc": true,
-  "resources": "YJTaskMark/Classes/YJTaskMark.bundle",
-  "subspecs": [
-    {
-      "name": "kuyou",
-      "source_files": "YJTaskMark/Classes/kouyu/**/*",
-      "vendored_libraries": "YJTaskMark/Classes/Lib/*.a",
-      "frameworks": [
-        "Accelerate",
-        "Foundation",
-        "CoreGraphics",
-        "Security",
-        "SystemConfiguration",
-        "CFNetwork",
-        "AudioToolbox"
-      ],
-      "libraries": "z.1"
-    },
-    {
-      "name": "Util",
-      "source_files": "YJTaskMark/Classes/Util/**/*",
-      "dependencies": {
-        "YJTaskMark/kuyou": [
+  "source_files": "YJTaskMark/Classes/*.{h,m}",
+  "static_framework": true,
+  "dependencies": {
+    "YJExtensions": [
 
-        ],
-        "YJExtensions": [
+    ],
+    "YJNetManager": [
 
-        ],
-        "YJNetManager": [
+    ],
+    "LGAlertHUD": [
 
-        ],
-        "LGAlertHUD": [
+    ],
+    "MJExtension": [
 
-        ]
-      }
-    }
-  ]
+    ],
+    "SingSoundSDK": [
+
+    ]
+  }
 }
