@@ -1,4 +1,5 @@
-#source 'https://pt.singsound.com:10081/singsound-public/SingSoundSDKCocoaPodRepo.git'
+source 'https://cdn.cocoapods.org/'
+source 'https://pt.singsound.com:10081/singsound-public/SingSoundSDKCocoaPodRepo.git'
 use_frameworks!
 
 platform :ios, '8.0'

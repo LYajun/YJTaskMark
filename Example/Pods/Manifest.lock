@@ -58,6 +58,7 @@ PODS:
     - Reachability
     - YJExtensions
   - YJTaskMark (2.0):
+    - AFNetworking (= 3.2.1)
     - LGAlertHUD
     - MJExtension
     - SingSoundSDK
@@ -94,8 +95,8 @@ SPEC CHECKSUMS:
   SingSoundSDK: f839d2022b134e800e5d3e06c6a5f1aa63db2562
   YJExtensions: b02c849ffe62650cec815854c9362031d3034650
   YJNetManager: 2de45698355adda77563015b1bf884d468a688db
-  YJTaskMark: 37ad5d8a8f97cddc178ee0b70af74fa3aad635f7
+  YJTaskMark: e1fbf642835982253e76e05169352831d49da3fe
 
-PODFILE CHECKSUM: 4667774dd1fe9cef72af6b225c434f1becb1c312
+PODFILE CHECKSUM: d33a6c42ff87ac2b6b136d38888ba022625d0f1e
 
 COCOAPODS: 1.9.2

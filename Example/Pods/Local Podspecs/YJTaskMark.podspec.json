@@ -25,6 +25,9 @@
     "YJExtensions": [
 
     ],
+    "AFNetworking": [
+      "3.2.1"
+    ],
     "YJNetManager": [
 
     ],

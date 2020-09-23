@@ -25,8 +25,10 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
   s.source_files = 'YJTaskMark/Classes/*.{h,m}'
-   s.static_framework  = true
+  s.static_framework  = true
+
   s.dependency 'YJExtensions'
+  s.dependency 'AFNetworking','3.2.1'
   s.dependency 'YJNetManager'
   s.dependency 'LGAlertHUD'
   s.dependency 'MJExtension'
