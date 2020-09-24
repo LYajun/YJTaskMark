@@ -138,7 +138,7 @@ static CGFloat kSoundOffset = 8;
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
     request.timeoutInterval = 10;
     [request setHTTPMethod:@"POST"];
-    NSString * argument = [NSString stringWithFormat:@"appid=%@&timestamp=%@&user_id=%@&user_client_ip=%@&request_sign=%@",cSpeechAppkey,timestamp,cSpeechUserID,user_client_ip,signature];
+    NSString * argument = [NSString stringWithFormat:@"appid=%@&timestamp=%@&user_id=%@&user_client_ip=%@&request_sign=%@&warrant_available=%li",cSpeechAppkey,timestamp,cSpeechUserID,user_client_ip,signature,(long)12*3600];
     request.HTTPBody = [argument dataUsingEncoding:NSUTF8StringEncoding];
     __weak typeof(self) weakSelf = self;
     NSURLSessionDataTask * task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -164,6 +164,8 @@ static CGFloat kSoundOffset = 8;
                 NSString *result =[[ NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                 NSLog(@"%@",result);
             }
+        }else{
+            NSLog(@"AuthInfoWithWarrantId 失败");
         }
     }];
     [task resume];
@@ -209,7 +211,9 @@ static CGFloat kSoundOffset = 8;
         NSString *extName = [refText pathExtension];
         config.audioType = extName.lowercaseString;
          [LGAlert showIndeterminateWithStatus:@"语音识别中..."];
-        [[SSOralEvaluatingManager shareManager] startEvaluateOralWithWavPath:refText config:config];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [[SSOralEvaluatingManager shareManager] startEvaluateOralWithWavPath:refText config:config];
+        });
     }else{
         switch (markType) {
             case YJSpeechMarkTypeWord:
@@ -322,12 +326,12 @@ static CGFloat kSoundOffset = 8;
 }
 // 评测停止
 -(void)oralEvaluatingDidStop{
-    [LGAlert hide];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [LGAlert hide];
+    });
 }
 
 -(void)oralEvaluatingDidEndWithResult:(NSDictionary*)result RequestId:(NSString*)request_id{
-    [LGAlert hide];
-    
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
        __weak typeof(self) weakSelf = self;
        dispatch_async(dispatch_get_main_queue(), ^{
@@ -412,7 +416,15 @@ static CGFloat kSoundOffset = 8;
 -(void)oralEvaluatingDidEndError: (NSError *)error RequestId:(NSString *)request_id{
     NSString *fullpath = [[YJSpeechFileManager defaultManager].speechRecordDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.wav",request_id]];
     [[YJSpeechFileManager defaultManager] removeRecordFileAtPath:fullpath complete:nil];
-     [LGAlert hide];
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [LGAlert hide];
+        if (error.userInfo && [[error.userInfo objectForKey:@"error"] containsString:@"audio type is not supported"]) {
+            [weakSelf showResult:@"该音频格式不支持"];
+        }else{
+            [weakSelf showResult:@"录音超时"];
+        }
+    });
     NSLog(@"评测失败回调2:error:%@",error);
 }
 
@@ -425,9 +437,15 @@ static CGFloat kSoundOffset = 8;
 }
 // 前置超时
 - (void)oralEvaluatingDidVADFrontTimeOut {
-    //建议取消
+     //建议取消
     [self cancelEngine];
-    [self showResult:@"录音超时"];
+     __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+            [LGAlert hide];
+            [weakSelf showResult:@"录音超时"];
+          
+       });
+   
 }
 // 后置超时
 - (void)oralEvaluatingDidVADBackTimeOut {
@@ -435,8 +453,11 @@ static CGFloat kSoundOffset = 8;
 }
 // 录音即将超时（只支持在线模式，单词20s，句子40s)函数
 -(void)oralEvaluatingDidRecorderWillTimeOut{
-     [self showResult:@"录音超时"];
-    [LGAlert hide];
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [LGAlert hide];
+        [weakSelf showResult:@"录音超时"];
+    });
 }
 
 #pragma mark - 音量定时处理
