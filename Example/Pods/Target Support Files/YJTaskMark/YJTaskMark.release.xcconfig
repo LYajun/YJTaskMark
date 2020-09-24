@@ -1,7 +1,8 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/YJTaskMark
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/SingSoundSDK/singsoundSDK/frame"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/LGAlertHUD" "${PODS_CONFIGURATION_BUILD_DIR}/LGLog" "${PODS_CONFIGURATION_BUILD_DIR}/MJExtension" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry" "${PODS_CONFIGURATION_BUILD_DIR}/Reachability" "${PODS_CONFIGURATION_BUILD_DIR}/YJExtensions" "${PODS_CONFIGURATION_BUILD_DIR}/YJNetManager" "${PODS_ROOT}/../../YJTaskMark/Classes/Lib"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/YJTaskMark" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/LGAlertHUD" "${PODS_ROOT}/Headers/Public/LGLog" "${PODS_ROOT}/Headers/Public/MJExtension" "${PODS_ROOT}/Headers/Public/Masonry" "${PODS_ROOT}/Headers/Public/Reachability" "${PODS_ROOT}/Headers/Public/YJExtensions" "${PODS_ROOT}/Headers/Public/YJNetManager" "${PODS_ROOT}/Headers/Public/YJTaskMark"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../YJTaskMark/Classes/Lib"
+OTHER_LDFLAGS = $(inherited) -l"ssound" -l"z.1" -l"z.1.1.3" -framework "SingSound"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}

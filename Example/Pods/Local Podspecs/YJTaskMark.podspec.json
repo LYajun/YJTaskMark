@@ -1,6 +1,6 @@
 {
   "name": "YJTaskMark",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "summary": "基于先声的语音评测工具",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/LYajun/YJTaskMark",
@@ -13,19 +13,17 @@
   },
   "source": {
     "git": "https://github.com/LYajun/YJTaskMark.git",
-    "tag": "2.0.1"
+    "tag": "2.0.2"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "YJTaskMark/Classes/*.{h,m}",
+  "resources": "YJTaskMark/Classes/SingSound.bundle",
+  "source_files": "YJTaskMark/Classes/Util/**/*",
   "dependencies": {
     "YJExtensions": [
 
-    ],
-    "AFNetworking": [
-      "3.2.1"
     ],
     "YJNetManager": [
 
@@ -35,9 +33,12 @@
     ],
     "MJExtension": [
 
-    ],
-    "SingSoundSDK": [
-
     ]
-  }
+  },
+  "vendored_libraries": "YJTaskMark/Classes/Lib/*.a",
+  "vendored_frameworks": "YJTaskMark/Classes/Lib/*.framework",
+  "libraries": [
+    "z.1.1.3",
+    "z.1"
+  ]
 }

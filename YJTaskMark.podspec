@@ -22,14 +22,23 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/LYajun/YJTaskMark.git', :tag => s.version.to_s }
 
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
   s.requires_arc = true
-  s.source_files = 'YJTaskMark/Classes/*.{h,m}'
+  s.resources = 'YJTaskMark/Classes/SingSound.bundle'
 
-  s.dependency 'YJExtensions'
-  s.dependency 'AFNetworking','3.2.1'
-  s.dependency 'YJNetManager'
-  s.dependency 'LGAlertHUD'
-  s.dependency 'MJExtension'
-  s.dependency 'SingSoundSDK'
+   s.source_files = 'YJTaskMark/Classes/Util/**/*'
+    s.dependency 'YJExtensions'
+    s.dependency 'YJNetManager'
+    s.dependency 'LGAlertHUD'
+    s.dependency 'MJExtension'
+    # util.dependency 'AFNetworking','3.2.1'
+
+     s.vendored_libraries = 'YJTaskMark/Classes/Lib/*.a'
+      s.vendored_frameworks =  'YJTaskMark/Classes/Lib/*.framework'
+ # s.frameworks  = 'Foundation'
+      s.libraries   = 'z.1.1.3','z.1'
+
+
+
+
 end

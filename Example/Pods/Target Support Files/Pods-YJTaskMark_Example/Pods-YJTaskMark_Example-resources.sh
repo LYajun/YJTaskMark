@@ -98,11 +98,11 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/LGAlertHUD/LGAlertHUD/LGAlertHUD.bundle"
-  install_resource "${PODS_ROOT}/SingSoundSDK/singsoundSDK/bundle/SingSound.Bundle"
+  install_resource "${PODS_ROOT}/../../YJTaskMark/Classes/SingSound.Bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/LGAlertHUD/LGAlertHUD/LGAlertHUD.bundle"
-  install_resource "${PODS_ROOT}/SingSoundSDK/singsoundSDK/bundle/SingSound.Bundle"
+  install_resource "${PODS_ROOT}/../../YJTaskMark/Classes/SingSound.Bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

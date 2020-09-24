@@ -1,1 +1,0 @@
-../../../LGAlertHUD/LGAlertHUD/AlertView/YJAlertViewButtonProperties.h
