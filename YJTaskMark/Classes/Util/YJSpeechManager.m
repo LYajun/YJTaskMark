@@ -256,10 +256,11 @@ static CGFloat kSoundOffset = 8;
         config.rateScale = 1.0;
         // 录音回调时间间隔 int类型 单位毫秒
         config.recordTimeinterval = 50;
-        NSString *recordDir = [[YJSpeechFileManager defaultManager] speechRecordDir];
         //开始评测
-        [[SSOralEvaluatingManager shareManager] startEvaluateOralWithConfig:config storeWavPath:recordDir];
-        [self startTimer];
+        [[SSOralEvaluatingManager shareManager] startEvaluateOralWithConfig:config];
+        if (self.markType != YJSpeechMarkTypeASR && self.markType != YJSpeechMarkTypeChineseASR) {
+            [self startTimer];
+        }
     }
 }
 - (BOOL)isSpeechMarking{
@@ -335,7 +336,7 @@ static CGFloat kSoundOffset = 8;
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
        __weak typeof(self) weakSelf = self;
        dispatch_async(dispatch_get_main_queue(), ^{
-           [LGAlert hide];
+          
            YJSpeechSingModel *singModel = [YJSpeechSingModel mj_objectWithKeyValues:result];
            
            YJSpeechResultModel *model = [[YJSpeechResultModel alloc] init];
@@ -403,7 +404,7 @@ static CGFloat kSoundOffset = 8;
                model.totalScore = singModel.result.overall;
                model.pronunciationScore = singModel.result.pron;
            }
-           
+           [LGAlert hide];
            weakSelf.isMarking = NO;
            weakSelf.isEndMark = NO;
            if (weakSelf.speechResultBlock) {
@@ -421,8 +422,12 @@ static CGFloat kSoundOffset = 8;
         [LGAlert hide];
         if (error.userInfo && [[error.userInfo objectForKey:@"error"] containsString:@"audio type is not supported"]) {
             [weakSelf showResult:@"该音频格式不支持"];
+        } else if (error.userInfo && [[error.userInfo objectForKey:@"error"] containsString:@"no warrant provided"]){
+            weakSelf.isInit = NO;
+            [weakSelf getWarrntIdAuth];
+            [weakSelf showResult:@"操作失败"];
         }else{
-            [weakSelf showResult:@"录音超时"];
+            [weakSelf showResult:@"操作失败"];
         }
     });
     NSLog(@"评测失败回调2:error:%@",error);
