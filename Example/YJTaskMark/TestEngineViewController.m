@@ -48,7 +48,7 @@
         if (resultModel.isError) {
             weakSelf.resultTextView.text = resultModel.errorMsg;
         }else{
-            if (weakSelf.markType == YJSpeechMarkTypeASR) {
+            if (weakSelf.markType == YJSpeechMarkTypeASR || weakSelf.markType == YJSpeechMarkTypeChineseASR) {
                weakSelf.resultTextView.text = [NSString stringWithFormat:@"识别结果: %@",resultModel.recognition];
             }else{
                 weakSelf.resultTextView.text = [NSString stringWithFormat:@"得分: %.f分",resultModel.totalScore];
