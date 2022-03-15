@@ -123,7 +123,7 @@ static CGFloat kSoundOffset = 8;
     [SSOralEvaluatingManager shareManager].delegate = self;
     
     [SSOralEvaluatingManager registerEvaluatingManagerConfig:managerConfig];
-    [[SSOralEvaluatingManager shareManager] registerEvaluatingType:OralEvaluatingTypeLine];
+    [[SSOralEvaluatingManager shareManager] registerEvaluatingType:OralEvaluatingTypeLine userId:[YJNetManager defaultManager].userID];
     
 }
 /**
