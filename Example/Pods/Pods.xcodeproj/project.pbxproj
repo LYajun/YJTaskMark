@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00E915D7E15B4FB9DB03473F6E6A5931 /* Pods-YJTaskMark_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D444BFB9D224ED887D244A809F11365E /* Pods-YJTaskMark_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0123E930C526D7099E5E21F1D2C7ABB9 /* YJSpeechTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0178380130207035A9B4ABDE11212213 /* YJSpeechTimer.m */; };
 		031465E56E9B4F02433001F418226AC5 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = B5A9BC6D3F17BA0B79C9EE45A1605E47 /* util.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		032228BC8A3DB747DEB4DFB1931F8BD2 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BE71D0B1D164D4E4130FB5D0F10AA97 /* vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		039061921033F0C8DF9F094A2877CED9 /* YJUploadModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7E9AD1971C760A8648A0B3A14ACFE9 /* YJUploadModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +22,7 @@
 		0A401B9929BE9685DAA905A8C122BD6F /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = B687F4FBBAA0ADC743B6C24365BB785A /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B492FFEC27BBC3C6E2B8F0333B05FF6 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A94BDCE15EFEE21B480E9DE5B1E27C0 /* MJPropertyKey.m */; };
 		0BC625AA53DE0E563AD693AE3D04C86F /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B2B2F278DDF4E71D09F8D9AB74FF71 /* XPathQuery.m */; };
+		0DE3E21523E402D3C6897AF8C74E35A5 /* SingSound.Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4A98EDEB2FB2B156B1EFDC5BA27C74A8 /* SingSound.Bundle */; };
 		0FDE5246BB0A1BBDFBCDD47925EEB108 /* UIWindow+YJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D7845D2CE0DC988C80D82925C962C9 /* UIWindow+YJAlertView.m */; };
 		100D2B3107AA6DBA653BDFADE108BFA2 /* YJAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F28D29329DB87D4739DF81C56B5CA6 /* YJAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10A3C45D7032C8F5EF7F72658D2F5840 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4927C643102CA060EBAD69C24E6E3ECC /* MASConstraintMaker.m */; };
@@ -38,18 +38,22 @@
 		1CD3BDECDB8525183812C413E536623C /* YJAlertViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E443E1FDD32B8223460A07A9ACB02F /* YJAlertViewCell.m */; };
 		1F3CF09E6958049E6C5C1A5B66261CE4 /* DDOSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 234F33EE4EDA470FAF8336484DA74C1A /* DDOSLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FC426B9A9EFB8E710E96DA1886A19A0 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A7639CCECE9AD5319C22A63A313B9C29 /* UIImageView+AFNetworking.m */; };
+		1FC4B569AB1B9DB0E8711DB37E428FC4 /* YJSpeechSingModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB3BC491D43032F33E259854D25D693 /* YJSpeechSingModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FCF01A0A4FCF7567006A3C7E4BBEC69 /* gumbo.h in Headers */ = {isa = PBXBuildFile; fileRef = D7FAD911317C14774CD455DA9DA86DAD /* gumbo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		20A6279148C3C4094E35E2AEDE8B1B39 /* YJTaskMarLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0F40CF565BAE1FC1E46109AC5F965A /* YJTaskMarLabel.m */; };
 		20B7D7A2183984AFE675D5E92E8084AC /* LGTipsAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB57BC6CF5FD24CE897984B516F6348C /* LGTipsAlertView.m */; };
 		2251736499C4D4444CCC6FAC922F3440 /* UIImageView+YJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FA5824F068F72C1545ED7DF95A1F6C0 /* UIImageView+YJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2333B852479C68A6338517202B5BDB96 /* YJNetManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 666753A191B6192A30DC8F6179E7E3D9 /* YJNetManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23F4D339FADA0958399CE16D372D0E43 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 79D9ABBDF0919C724CAAED4925E12554 /* util.c */; };
+		246A5F73F72722304C44B0E8155D4433 /* YJSpeechTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 40DE9ABFF52191066A5AE34AAA970728 /* YJSpeechTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2521FFC63B4CA1D6DDFDA1866B0DD6C0 /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = E9DF08FA325546B977954E5FBFE9FCB6 /* CocoaLumberjack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25C3248176E9E766D2CBAC5DF828BD1D /* YJEGumbo+Query.h in Headers */ = {isa = PBXBuildFile; fileRef = FD9F48F3BFD3F081F4945CB5807DDBFE /* YJEGumbo+Query.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		266BFD9615A3E8D6AFC913ACFE9A4EFC /* YJAlertViewButtonProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 54684FBE2B246A1E9EE5A9927C9B0642 /* YJAlertViewButtonProperties.m */; };
+		267F1A75361AF5EED6F34020A4F71629 /* YJSpeechManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 499582DC7F43C15FFCAD5D3189C36A63 /* YJSpeechManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26DB51A22C65EEBE9A75CF251D6ADC14 /* UIDevice+YJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A9F5C48FA30E8797E113490D549C012 /* UIDevice+YJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		283C972AED54024DA8B4879C1C5BC827 /* NSBundle+YJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 955CD6023A7A44F445C3BA1368116AC3 /* NSBundle+YJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		294A4C6419CD726414B415C3C801D399 /* string_piece.h in Headers */ = {isa = PBXBuildFile; fileRef = 977EE27093031F6632C32447069B2C8A /* string_piece.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FD4A8BC3308F09A840FD37007E7D3E1 /* YJSpeechResultModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8724A508D990315C0760EFF59D95DAFF /* YJSpeechResultModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30DF4AEAB49788C659C887FFBD30F4F4 /* YJExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 038E2AA02D106163DCFED66DAE5730BA /* YJExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32ACC252D765EEB0484D8D97373A84CA /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BFDFAEA5ADA13FC856677310494F00 /* UIActivityIndicatorView+AFNetworking.m */; };
 		32D0B022AE91EF8757D7A2689AF89DA4 /* NSDictionary+YJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A5724A0C766462240AA491909DD018 /* NSDictionary+YJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,6 +65,7 @@
 		35AA9DF0969A20A6B5D10FE805300031 /* tokenizer.c in Sources */ = {isa = PBXBuildFile; fileRef = DB3348EA3C5C8288E00919FE1E1576A7 /* tokenizer.c */; };
 		36BEF1AB1BE17E4474DF8EBF5A501F22 /* YJAlertViewShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E70B298F5FA6BECF765C37B6A52E18C /* YJAlertViewShadowView.m */; };
 		37F6A3BECF37C125152A3BBA232AD7DC /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 720DCF2F1A0A286B261ADBD26BAF80DA /* NSObject+MJKeyValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3819E42D0B1EC89E2104F5AC07866B01 /* YJSpeechFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E71EFEBE3A1099865209CF477EA39 /* YJSpeechFileManager.m */; };
 		3BEE57097167893948352F468E277C3D /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 526E06CB833B562E573D0A18DDF60912 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C9ABABCAE7372B6C29DA4C5D34AE221 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD3A69E9EEC492ABF6C4B42FC5CAEDA /* AFURLRequestSerialization.m */; };
 		3CADE63E4352EBBD0FDF234C5E8157F9 /* YJSheetHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D990FBF721B160BDF2FBBBE9B7E2D69C /* YJSheetHeaderView.m */; };
@@ -74,8 +79,8 @@
 		41DED7BB0CAA5150EEDFB8929AFFF4D8 /* NSDate+YJ.h in Headers */ = {isa = PBXBuildFile; fileRef = C1ED3E20F1093B515322BF3F15AA5FD4 /* NSDate+YJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43131BAC8FB9019B893775E34069B626 /* YJVipControlView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7B67BE82B0BAF82EE9A4F42B2C46DB0 /* YJVipControlView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43C611FE9F68FC007B6C07A1D36AA974 /* YJAlertViewWindowContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D433699C2D87866221163375C89CDE /* YJAlertViewWindowContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		442A3C1189434CE8370038D1CE82B647 /* YJSpeechMark.h in Headers */ = {isa = PBXBuildFile; fileRef = BA006C580E8711BF54D60C8A469FFB5A /* YJSpeechMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44F4F19AD4287696C5F58310CA90D384 /* Reachability-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 838CAE182EFA8259CB1EBB95E03D1FEA /* Reachability-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46665A3EEAE0FB0B70902BBE4D97C981 /* YJSpeechFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8FB3926DC77BA1932AD5803BA1C700 /* YJSpeechFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47C6523C2DF815529DFF3533013DA57F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336D5578CC5CA2B489C9877C1F35CBE9 /* MobileCoreServices.framework */; };
 		495AEF05B0422847778BC635C1CC2C5B /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D729DD2B7C83C8EC98D4E3692AA75E1 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B8250A0D762E4E225095224AC08498A /* UISegmentedControl+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F76470F80EDD5E097D4C07DE289690E0 /* UISegmentedControl+YJ.m */; };
@@ -105,9 +110,12 @@
 		5B73ABDBBEBB1BFB7C87D22F836210A6 /* LGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CF519E760D94B424986F38DD39A7DB9B /* LGProgressHUD.m */; };
 		5D97060F78EB4A37B9F386F4B6665B92 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 751901DBC17487CF4971ED70FA00A48C /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DD0AFD5259A371DD860E9A78AEAA00F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387EF7575B5E2ACD3B9EBBFA6A7D0AE1 /* CoreGraphics.framework */; };
+		5E775B606570434312236DE3C1F21981 /* YJTaskMark-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B87115A8ACCED0A77F01773DD9335861 /* YJTaskMark-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E99CE6642C9226A8438874AD6B18A5F /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BD297C89D36FC0DDA020FFBFCF50FB /* DDContextFilterLogFormatter.m */; };
+		5EF09239CA427981740885C461EB1811 /* YJSpeechTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0178380130207035A9B4ABDE11212213 /* YJSpeechTimer.m */; };
 		6130390A28FACC2AAB743924489049C0 /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 61FDACF95DB15102C79DCA79127FF75B /* MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		614B1963F2149FA26D9A45CFA12F9AF1 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A03559E1C8F6BBE9E63C08D5C516E4 /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62FAC6AE68E25DEBF754BD05B2397F3A /* YJSpeechSingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38640BFBE08ACB3B2FCC6855C1B787E9 /* YJSpeechSingModel.m */; };
 		63789D93D98C0586B0209C2C985771C7 /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 86CB88C34FE359DC053809468680FCE8 /* DDFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		644ED9B098E888EBC0954AFB0C8AA6D4 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6034F758E1CC2BBE630690BA206CA6 /* NSObject+MJProperty.m */; };
 		662E4837B8F0E24DD34BFF61AD23569F /* YJAlertViewWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 84AF4FC3FAA6D3CF31966376DCBBAA82 /* YJAlertViewWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -134,7 +142,6 @@
 		77AB6DC2AE32F312EB418F2CD7B59B42 /* LGLog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C86E1F9C8893F3C160A5F73A74E495D /* LGLog-dummy.m */; };
 		78002465C35FA984E82E1D0446D85BD1 /* YJAlertViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C143902EDF846827F2A5E18F0660FE /* YJAlertViewButton.m */; };
 		7961F4A8E258A88368A791FFBD70DF58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E293B29CE81D225DACBC4C36E53DDE /* Foundation.framework */; };
-		7A08614C55278839613A812E48EBB738 /* YJSpeechSingModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB3BC491D43032F33E259854D25D693 /* YJSpeechSingModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A329CD49FE6D0B6B84863C2CD109A9A /* YJNetManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADEC46CD3585137F51845104664203 /* YJNetManager-dummy.m */; };
 		7C2F26B28239E898788C998D6894629E /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A5F462A52AD1CAD337CA5D48FF91D4 /* NSArray+MASAdditions.m */; };
 		7D251C0193F9EA6B267B6999019B0D29 /* insertion_mode.h in Headers */ = {isa = PBXBuildFile; fileRef = 55214360AF5703719031B57D8FDFAA98 /* insertion_mode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -148,25 +155,26 @@
 		84BA592D4EDF5C2025A8E2BA5928A981 /* NSFileManager+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = FF81FE85E882BB26B2F0ACDCA3B05A81 /* NSFileManager+YJ.m */; };
 		8547353153D35ACC3EF2CAB6AAEF1265 /* utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = A619F6BACB6EFEA2FF9DF7F79D03243C /* utf8.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86469EDD5558A59BA4109620C6724E8B /* MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2014B76E061F5FCE0CD45F22E235F87 /* MJExtension-dummy.m */; };
+		867FA71C59559644718AE2755E76AA96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E293B29CE81D225DACBC4C36E53DDE /* Foundation.framework */; };
 		86F4E4247CDF40AAAB9AEA6972FB1D41 /* YJKlgEmptyAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E5409D347BEB66B4C01B20BB14B839C6 /* YJKlgEmptyAlert.m */; };
 		8707E40B4861EAF7F80E084A133BCE7A /* tokenizer_states.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CBBC252876138040C02A603178BA977 /* tokenizer_states.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		886B4AC9B1FE36EFF7CD38820E10BFAD /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = B51287CBC21CF7157E5B790ACEE311DC /* MJPropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8874B183B5608A308B8BAD65684FBF53 /* token_type.h in Headers */ = {isa = PBXBuildFile; fileRef = F7115E16E56147DB2816AAD2F1E04F29 /* token_type.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88B50BC247A360A64FD0730A6BA4F6A8 /* NSNumber+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AF8035AA2682029474A4302435E268 /* NSNumber+YJ.m */; };
-		89843E740978608E85A8E746B9786901 /* YJSpeechManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 499582DC7F43C15FFCAD5D3189C36A63 /* YJSpeechManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89F671706CD107220B3B0CFB8959954F /* YJSpeechTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 40DE9ABFF52191066A5AE34AAA970728 /* YJSpeechTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AEBF8A5462B3B911208D1AC323633E0 /* YJSpeechResModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 972ADA26D4730613976F27EB2B6B0761 /* YJSpeechResModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8912E48DAD95389BEF0385676FAD8673 /* YJSpeechFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8FB3926DC77BA1932AD5803BA1C700 /* YJSpeechFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B2370F2374ABD2F85B1671802077ADD /* NSBundle+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F8B4005157CA87AC3E2B70800A2D0 /* NSBundle+YJ.m */; };
 		8C403AA7D32772AB3A3D4E60F41FE066 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E979F6C82C545E99CF1B211D8C0E4516 /* MJExtensionConst.m */; };
 		8D5029DE9176EC6597463E31D965E85A /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB84D9A0D3D868E16DFA55527014372 /* DDDispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D945AF1575271D02EC4DFB28BA6E9F2 /* vector.c in Sources */ = {isa = PBXBuildFile; fileRef = BADE094C06D749BE2235A0670E8F375A /* vector.c */; };
 		8DE19395A7F8F8200080DEEE4C7A257F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 776C487949150F7E056BA23F226C30ED /* Reachability.m */; };
+		8E1EB28F4ACB0224B3968A920CAD8435 /* YJSpeechManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AA6832EC9AC1A52148B521CDD400B /* YJSpeechManager.m */; };
 		8E1F87F0ACB54A151840D2331FFAC28B /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D7800F2D08AD9CFA4B29AD6B5E509D5 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E73FD4C457A9DB73D9576BD95F9357D /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A175DE25E5514D30C0468F8544F759C /* View+MASAdditions.m */; };
 		91203AF65A5864BD32A0B21791EC9630 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 76F1A1C25C2D415461F5E84F87DAE83A /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9232B150E0529B0167882FEC42CB019D /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A8DF012AC56231F6139899541CA6A /* UIProgressView+AFNetworking.m */; };
 		9237290B2AF436BB6DD33AB8260BF7F0 /* YJAlertViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8486FC82C765F44232825C0B2F5A4CC3 /* YJAlertViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92958B9BC2D746A2D51F8D9FFF7CEBBC /* YJAlertViewButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FE834C6E4580D95FA68B0E2405890A /* YJAlertViewButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92CBC7D6DA2C92853EC15B682B93933E /* YJSpeechResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A34406EFD4FEB9BB3F818A14653A5AEE /* YJSpeechResultModel.m */; };
 		92ECE2B0C344AA15C56B38953DCC25FB /* YJAnswerConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 338EEBF855B2951AA059CB24CBE9FEAD /* YJAnswerConst.m */; };
 		94EEDF6D32DFE12B049F9FDF67F48373 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E6036B90ABBF31A27D781931C48882 /* MJPropertyType.m */; };
 		97BA53AF0CD8369402B7F57448A7FCA2 /* NSMutableAttributedString+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F46FBE935A5F72222F56464A5AA8CB9F /* NSMutableAttributedString+YJ.m */; };
@@ -176,7 +184,6 @@
 		99AB52615609245D9E4F629E83E10792 /* UIWindow+YJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 00BFECB2D62218FC9E6A4A3778A3BC21 /* UIWindow+YJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99E6C539F139111E1EAB87685A10C03A /* YJUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 878EAFB9AB2295395C994950BC85CDB4 /* YJUploadModel.m */; };
 		9A3F304505660AF8A599964E70B8F0D8 /* UINavigationBar+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BE70EB429FF083C0CF171971B9218E /* UINavigationBar+YJ.m */; };
-		9B2DD1317414BFD30D628F341BEC5D79 /* SingSound.Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4A98EDEB2FB2B156B1EFDC5BA27C74A8 /* SingSound.Bundle */; };
 		9CEB5D63B84F3267731D417E6928E1A6 /* DDOSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBEF02A58DD6A76D2A98AC23E486C7A /* DDOSLogger.m */; };
 		9DD57098FB6914D8668EF3274CE1EAF1 /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8819F9F5DDA284EC5B17F5AEF4C68E32 /* DDASLLogCapture.m */; };
 		9FB865C484EEA7B58C9E29F02FE7A3FC /* YJLancooAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E745911CE379A57982458A17F2671D /* YJLancooAlert.m */; };
@@ -200,8 +207,6 @@
 		AD31E26947522FD51CB185709CDCE504 /* tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4DEAC690322FC69928C97E1FBB8E4F /* tokenizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD7FEFA3196F32114EEBD0C766F520C8 /* NSArray+YJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6DCCAC00655022737845BD2403D6CD /* NSArray+YJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD9F5BD9C2E0F0C3B79BB181CDB5DB7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C15DCF6476083777ABD64BD27020EE /* UIKit.framework */; };
-		ADD9ADC0988D380E1475055CE84613E2 /* YJSpeechSingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38640BFBE08ACB3B2FCC6855C1B787E9 /* YJSpeechSingModel.m */; };
-		AE8B83E37782C619C676FC5BF68AE2F4 /* YJSpeechResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A34406EFD4FEB9BB3F818A14653A5AEE /* YJSpeechResultModel.m */; };
 		AE9DDB2E16623FE05655A16AC0D54129 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CB24780E492392FBA46A101F43A8CCB4 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF8EC0FDF4EA19FD38433599E8D8D77C /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 126CB4E4A9FE616E5F168A489274AED7 /* DDAbstractDatabaseLogger.m */; };
 		AFF7FA03E940A0D869D08268449C7CFD /* LGAlertHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A85EF72FA19D9FEA2341554F36905E /* LGAlertHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -232,7 +237,7 @@
 		C2DBDECDFE705C688D974CA3FBECBDE1 /* YJSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB0A20197C1C0F09D07A984ABC57B4 /* YJSheetView.m */; };
 		C312635BC7E26D5DBFF9191EC783D08C /* NSObject+YJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 085693D9DA746E2AB3F07A4B44672ACE /* NSObject+YJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3296E1E1BCEAEE6294A3FE8562C0EFC /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F1DA2F74B446999E29058950CBD17DE /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3F764FEC776C4F8A8563804C2B63781 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E293B29CE81D225DACBC4C36E53DDE /* Foundation.framework */; };
+		C417743494C05A40635A56D5F18E9741 /* YJSpeechResModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 972ADA26D4730613976F27EB2B6B0761 /* YJSpeechResModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C44E9AA7BC3A61A090CDDAD07B836FDA /* YJAlertViewButtonProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = CC91066677CFE86C84E5E012C98121FB /* YJAlertViewButtonProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C475568293E2D2ACCD657A01EDDB440D /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CB624B1C3496C7A0BD425E6069276B2 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4F57FF39540C38B9E926C062CDCEB3C /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8243F93BF1D9A030A2C518B1B8C2581D /* UIButton+AFNetworking.m */; };
@@ -240,7 +245,6 @@
 		C64E9AABB2736DB0507C115E198B12A1 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2D32662E437B92F0FB444CB2E8701C /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C667724B53A83E59150FFA3BE9385197 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = C881C72875F546ECB5F3401D6F930460 /* error.c */; };
 		C6E1FE70496A960EA8AABAB0B4D6253C /* LGAlertHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = D47EC3F49CF0D864B8C2C873C5FAB5A3 /* LGAlertHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C76C81B841AF390337B5F278BECD598C /* YJSpeechResultModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8724A508D990315C0760EFF59D95DAFF /* YJSpeechResultModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C78360BA3702640AA21B5E080CBBCEB3 /* YJSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB49A2E45AF86CFA0C156F19E389075 /* YJSheetCell.m */; };
 		C848DE5692F9DFDCF895CFA1BBFFFDAE /* NSArray+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BDA17E9A4CF6C5EAE70CABDF4702CE /* NSArray+YJ.m */; };
 		C9FBAEFA5B005A06CF58519EAED12E59 /* UIButton+YJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B700DDD74F7B3E531FA3B70E692137 /* UIButton+YJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -250,9 +254,7 @@
 		CD43252569B1C419ABDA876B5D74CC39 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AB4492B4DED5B5EF8E7FF59C7F9211BE /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDB8FD4A4B7D62B46881FAD01FD0ADFC /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D13DDC506DD66BE5BF7D5C51C3B942D2 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE9F398B1DAD84FEA79B6E830A05E852 /* MJExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47D32C605F85C68EB818CF2180C88242 /* MJExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1BDF1F9CC0B348178BC5967319590E3 /* YJTaskMark-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B87115A8ACCED0A77F01773DD9335861 /* YJTaskMark-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D22FDBF1793DAE1CE4B322CD9954D986 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 694081779C17FF7C8F95C5A0AE40B976 /* AFNetworkActivityIndicatorManager.m */; };
-		D359034B6C68B65A453CFEE8EB920BA1 /* YJSpeechManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AA6832EC9AC1A52148B521CDD400B /* YJSpeechManager.m */; };
 		D437C5DFDC43F7836330E520E661E013 /* YJSubtitleParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB091CA2FFB47CEDC8688F6C787611A3 /* YJSubtitleParser.m */; };
 		D50A215AB310823E5951A6F11B29729D /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = A08B6336C209816B4D1020F34CBB07DB /* parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5245783DD6091088CC902AFAB65542D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E293B29CE81D225DACBC4C36E53DDE /* Foundation.framework */; };
@@ -260,11 +262,11 @@
 		D6B9216743757D8CCF0DC1BAFAAEFBE6 /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 189132563361695C9490884501D9BDB2 /* MJPropertyKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6E2020B1FE1944E73861EA1E30C05C1 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = E1348F3C6FA855D779519E9FC19FE666 /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D70C32F05ECB4C8C97173893AD7BD66F /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B01B3E76229CE6E39C1AB96271F351 /* AFHTTPSessionManager.m */; };
-		D76214B72CF16A4B77F5C0C4DD271215 /* YJTaskMark-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 554570C05CD158AA71EB2D376DD2A57C /* YJTaskMark-dummy.m */; };
 		D837CD7955FA421D7BD2D812AEC84DD0 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C94ECFB4D7D19234107296E6B56B0 /* MASCompositeConstraint.m */; };
 		D9B172907EECDB1285FB5437D65083FE /* NSString+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6A45259D83186BC56B32A83FE798C /* NSString+YJ.m */; };
 		DAF3AD1CF6CF8A3C2A97576C56EB6F1F /* YJAlertViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB55275B4B2E8E507D6C99B7249663 /* YJAlertViewHelper.m */; };
 		DC4E128BE666CC1516D79DE0BC999875 /* LGLog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43BDA084EA26A23F87FD5CB7C13D3C7B /* LGLog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC9CDF3582114450D3DFBE0CDD6FE3B3 /* YJTaskMark-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 554570C05CD158AA71EB2D376DD2A57C /* YJTaskMark-dummy.m */; };
 		DE178D714326720AF389F18F9DF337C0 /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = EE9B16F32ABC1C8A5CE26139B120A37A /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE9559EAF699DBA9C60D23ABE121859F /* NSDictionary+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DD9BBC0FB6B9DB1583494BD54E908D /* NSDictionary+YJ.m */; };
 		DF6F6A9EF686883FA70D08F567B9AD85 /* UIControl+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 07713C7A6B17B26D7F21280CB3DA6C2A /* UIControl+YJ.m */; };
@@ -278,7 +280,6 @@
 		E4A9EDFB52734D80DDCD9E6CE20FD7CD /* YJLancooAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DCD41F774368B4F78C4412E9A2610E8 /* YJLancooAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4B485634FE4908891391C6A4E1503A0 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2941EFFDDEA5389BF58C5133E2E4AC53 /* DDLog.m */; };
 		E66C41B1E4357056C47E954FAEF18DB9 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 714F0CD92031B959C7F4FFF339C0440E /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7F4B8511D5AD1474F540BD51960388E /* YJSpeechMark.h in Headers */ = {isa = PBXBuildFile; fileRef = BA006C580E8711BF54D60C8A469FFB5A /* YJSpeechMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E811941E2ACD5310D24D107FA8FCD6FA /* Reachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC71D9B931D305E7DA57CCBB9F9232B /* Reachability-dummy.m */; };
 		E8BFC67206848613A4902FDF340755EE /* YJAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D8889385A069F5A326521EDEAE2243 /* YJAlertViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E918F218653A245A46290DF654ECC9C3 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = AD949E487B960397F163B78B1CE79556 /* parser.c */; };
@@ -290,15 +291,14 @@
 		EBE4961386CC8568509F30B38D170434 /* YJSheetHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BF57B8A56FC35DEA391CB36077C0D2F /* YJSheetHeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED068BDDA65490A0A95462915A00D740 /* YJSheetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9655B175B20D6186FFF96115328945 /* YJSheetCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF52B4A167FE3A49629B7ADB51A981C3 /* string_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 614C1A593771DED57C6F39D00863078A /* string_buffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF9FAF95322DCCBC788A29EF56CDB91F /* YJSpeechResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA261953D4A5177CBE7BA7AA71EED78B /* YJSpeechResModel.m */; };
 		F060A01F09531A18142396AAC05B1D3C /* LGLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1B7A45B0EFA449CA6402F5F2BE903 /* LGLogFormatter.m */; };
 		F0A71CF7FF307ECE3B9ED2810C88FE4B /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E59A289D3F6006D9EB3801A838F7D2D /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0D6C8DDEFDF0F3A615478F18522F28C /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B81FD614ADF17AB71CF0B3DF691562E0 /* MJFoundation.m */; };
 		F0FB5C5CCF7451198295132242D51B2F /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C7CC2C3DAD5836F5586C42EB137A28E8 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1681383B06A14DE59CB17412A9AC046 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B182D8327A026103DA0B78FFA80A9 /* AFURLSessionManager.m */; };
 		F1D87801447F8DD985630C5665F159C3 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 371BC63A6664B108E332F939CCD8E17C /* NSObject+MJClass.m */; };
-		F204A25D0C741D44BC5D3BDBDA5CC457 /* YJSpeechResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA261953D4A5177CBE7BA7AA71EED78B /* YJSpeechResModel.m */; };
 		F3F70DD829DCC802F1135CCDA4B494D1 /* YJVipControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5977D53312BE1EC5C109C6EDADEF036 /* YJVipControlView.m */; };
-		F8321C635346EA61CBB527CA55409D37 /* YJSpeechFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E71EFEBE3A1099865209CF477EA39 /* YJSpeechFileManager.m */; };
 		F9053A8066B0FD0C1A4C3A774B06B153 /* NSFileManager+YJ.h in Headers */ = {isa = PBXBuildFile; fileRef = AC541C92AFF6431BF657EC3D3689313B /* NSFileManager+YJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F92C708AAE0F8316E87A912D014926C5 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6BC13BDB8CE83036924DDF2357D8E3 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F98D764EC96405337DD9FE6B10B085AE /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D89578DBEF2FDAEB06AA631D7AD4DAC1 /* UIWebView+AFNetworking.m */; };
@@ -316,6 +316,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		01BC9FDC9B0B75E01090DD1B8221CD87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D3BA58D0583DF37575CACAB3DDADC85;
+			remoteInfo = MJExtension;
+		};
 		09AA047345C81FAFDB9AFCB844BC0970 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -337,19 +344,19 @@
 			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
 			remoteInfo = AFNetworking;
 		};
+		15CD6CAC92988A2C7A3AFFD79A1BFF78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 918CD8C53721EE1BF698E5C3B955D42A;
+			remoteInfo = LGAlertHUD;
+		};
 		2C4753122F50C28507D9ED2988F078A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CAA047C0F5E4106F3904E8497FA17F97;
 			remoteInfo = Reachability;
-		};
-		36392F220D7564DB198A39F57671DB46 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4D3BA58D0583DF37575CACAB3DDADC85;
-			remoteInfo = MJExtension;
 		};
 		37C9979D39BA32A4B41AB866A8ADC15B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -379,12 +386,26 @@
 			remoteGlobalIDString = 918CD8C53721EE1BF698E5C3B955D42A;
 			remoteInfo = LGAlertHUD;
 		};
+		568177165984E66F85306F420C9335B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
+			remoteInfo = AFNetworking;
+		};
 		57BA7EACD9F88BE2619138471046DEE6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 85DC4DAB7466F397E27F5ED7DB8CA89C;
 			remoteInfo = YJTaskMark;
+		};
+		65A5225D236A96596F48DB17DA9F37F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF14B4D73A8B65413F1CD575C700DF56;
+			remoteInfo = YJNetManager;
 		};
 		A0E87964D995BBDEC8D79C71DB202DE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -400,19 +421,12 @@
 			remoteGlobalIDString = D38AEB5C6E0729E9103F7A01A85A3864;
 			remoteInfo = YJExtensions;
 		};
-		AC6B78827D9054411C077603DF462F75 /* PBXContainerItemProxy */ = {
+		B105A53C5459B58AEF64462E4DCEB821 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 918CD8C53721EE1BF698E5C3B955D42A;
-			remoteInfo = LGAlertHUD;
-		};
-		B0B7CB110F26FF6C6AE1582E871BF8F8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF14B4D73A8B65413F1CD575C700DF56;
-			remoteInfo = YJNetManager;
+			remoteGlobalIDString = D38AEB5C6E0729E9103F7A01A85A3864;
+			remoteInfo = YJExtensions;
 		};
 		C25155199DC1CE439AD5070C6667E714 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -441,13 +455,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
 			remoteInfo = Masonry;
-		};
-		F79ED1E731A3C70F1B932A101F49C1DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D38AEB5C6E0729E9103F7A01A85A3864;
-			remoteInfo = YJExtensions;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -820,6 +827,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		05B9AD83A817BA2091D427303AAD08E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867FA71C59559644718AE2755E76AA96 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		154FCCFC2B2A0D2CEEFB3959E37852A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -863,14 +878,6 @@
 				47C6523C2DF815529DFF3533013DA57F /* MobileCoreServices.framework in Frameworks */,
 				17C4032B45C4067DED1EC87D7260809B /* Security.framework in Frameworks */,
 				98BDE36C4B9FF345938B545205CDF4C8 /* SystemConfiguration.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6F9356984C0EE05BF4BF3D8709CF3792 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C3F764FEC776C4F8A8563804C2B63781 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1695,6 +1702,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A57A6826797DD91E13F0F9EF89CA6D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8912E48DAD95389BEF0385676FAD8673 /* YJSpeechFileManager.h in Headers */,
+				267F1A75361AF5EED6F34020A4F71629 /* YJSpeechManager.h in Headers */,
+				442A3C1189434CE8370038D1CE82B647 /* YJSpeechMark.h in Headers */,
+				C417743494C05A40635A56D5F18E9741 /* YJSpeechResModel.h in Headers */,
+				2FD4A8BC3308F09A840FD37007E7D3E1 /* YJSpeechResultModel.h in Headers */,
+				1FC4B569AB1B9DB0E8711DB37E428FC4 /* YJSpeechSingModel.h in Headers */,
+				246A5F73F72722304C44B0E8155D4433 /* YJSpeechTimer.h in Headers */,
+				5E775B606570434312236DE3C1F21981 /* YJTaskMark-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F44603758E2F1AD4EF3CD47FFC23238 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1804,21 +1826,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E915D7E15B4FB9DB03473F6E6A5931 /* Pods-YJTaskMark_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C73A76ADC4043E75851ACE1D640FB265 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46665A3EEAE0FB0B70902BBE4D97C981 /* YJSpeechFileManager.h in Headers */,
-				89843E740978608E85A8E746B9786901 /* YJSpeechManager.h in Headers */,
-				E7F4B8511D5AD1474F540BD51960388E /* YJSpeechMark.h in Headers */,
-				8AEBF8A5462B3B911208D1AC323633E0 /* YJSpeechResModel.h in Headers */,
-				C76C81B841AF390337B5F278BECD598C /* YJSpeechResultModel.h in Headers */,
-				7A08614C55278839613A812E48EBB738 /* YJSpeechSingModel.h in Headers */,
-				89F671706CD107220B3B0CFB8959954F /* YJSpeechTimer.h in Headers */,
-				D1BDF1F9CC0B348178BC5967319590E3 /* YJTaskMark-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1948,20 +1955,21 @@
 		};
 		85DC4DAB7466F397E27F5ED7DB8CA89C /* YJTaskMark */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18F375B24CE0E542772E83DBB22905D5 /* Build configuration list for PBXNativeTarget "YJTaskMark" */;
+			buildConfigurationList = 3EFDBC312E4332FC78D7C5385F736D5C /* Build configuration list for PBXNativeTarget "YJTaskMark" */;
 			buildPhases = (
-				C73A76ADC4043E75851ACE1D640FB265 /* Headers */,
-				0ACD17167DF0507747720684FE07F1CB /* Sources */,
-				6F9356984C0EE05BF4BF3D8709CF3792 /* Frameworks */,
-				73CC300F298810454B2E4640F3314CBF /* Resources */,
+				3A57A6826797DD91E13F0F9EF89CA6D8 /* Headers */,
+				39C197434F6E5EA2DB656D50ECD11708 /* Sources */,
+				05B9AD83A817BA2091D427303AAD08E7 /* Frameworks */,
+				2435EE5AFDDFB8ED5F85C76AB048B56B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9B7534985CCD63F455F60C75D0CD2264 /* PBXTargetDependency */,
-				E848B62CFB1296531E65E7B0ED8C506F /* PBXTargetDependency */,
-				F026C0D64A1173F9B4F82850580FD627 /* PBXTargetDependency */,
-				1E7398477C4B9FB3ACF65D4FE4E1A83C /* PBXTargetDependency */,
+				C5EEDF888F7806036E6F33004B56ADFA /* PBXTargetDependency */,
+				430C3021F84D3814615289C207F2E150 /* PBXTargetDependency */,
+				24B1CF6046864CE40694C643003513D3 /* PBXTargetDependency */,
+				D5947B7C70B68B62D11A6CA56491C398 /* PBXTargetDependency */,
+				AB811EFB8F901DCC4A19A962D053F320 /* PBXTargetDependency */,
 			);
 			name = YJTaskMark;
 			productName = YJTaskMark;
@@ -2125,18 +2133,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2435EE5AFDDFB8ED5F85C76AB048B56B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DE3E21523E402D3C6897AF8C74E35A5 /* SingSound.Bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5EA0F3F97DA0118F1E5C8FDDC5127C89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		73CC300F298810454B2E4640F3314CBF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B2DD1317414BFD30D628F341BEC5D79 /* SingSound.Bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2185,17 +2193,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0ACD17167DF0507747720684FE07F1CB /* Sources */ = {
+		39C197434F6E5EA2DB656D50ECD11708 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8321C635346EA61CBB527CA55409D37 /* YJSpeechFileManager.m in Sources */,
-				D359034B6C68B65A453CFEE8EB920BA1 /* YJSpeechManager.m in Sources */,
-				F204A25D0C741D44BC5D3BDBDA5CC457 /* YJSpeechResModel.m in Sources */,
-				AE8B83E37782C619C676FC5BF68AE2F4 /* YJSpeechResultModel.m in Sources */,
-				ADD9ADC0988D380E1475055CE84613E2 /* YJSpeechSingModel.m in Sources */,
-				0123E930C526D7099E5E21F1D2C7ABB9 /* YJSpeechTimer.m in Sources */,
-				D76214B72CF16A4B77F5C0C4DD271215 /* YJTaskMark-dummy.m in Sources */,
+				3819E42D0B1EC89E2104F5AC07866B01 /* YJSpeechFileManager.m in Sources */,
+				8E1EB28F4ACB0224B3968A920CAD8435 /* YJSpeechManager.m in Sources */,
+				EF9FAF95322DCCBC788A29EF56CDB91F /* YJSpeechResModel.m in Sources */,
+				92CBC7D6DA2C92853EC15B682B93933E /* YJSpeechResultModel.m in Sources */,
+				62FAC6AE68E25DEBF754BD05B2397F3A /* YJSpeechSingModel.m in Sources */,
+				5EF09239CA427981740885C461EB1811 /* YJSpeechTimer.m in Sources */,
+				DC9CDF3582114450D3DFBE0CDD6FE3B3 /* YJTaskMark-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2391,11 +2399,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1E7398477C4B9FB3ACF65D4FE4E1A83C /* PBXTargetDependency */ = {
+		24B1CF6046864CE40694C643003513D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = YJNetManager;
-			target = BF14B4D73A8B65413F1CD575C700DF56 /* YJNetManager */;
-			targetProxy = B0B7CB110F26FF6C6AE1582E871BF8F8 /* PBXContainerItemProxy */;
+			name = MJExtension;
+			target = 4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */;
+			targetProxy = 01BC9FDC9B0B75E01090DD1B8221CD87 /* PBXContainerItemProxy */;
 		};
 		25D911DE93CA6A6708AB6D6DFA02CA1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2420,6 +2428,12 @@
 			name = AFNetworking;
 			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
 			targetProxy = 10113D0DEA31C763412FC9D8E7DB09CC /* PBXContainerItemProxy */;
+		};
+		430C3021F84D3814615289C207F2E150 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LGAlertHUD;
+			target = 918CD8C53721EE1BF698E5C3B955D42A /* LGAlertHUD */;
+			targetProxy = 15CD6CAC92988A2C7A3AFFD79A1BFF78 /* PBXContainerItemProxy */;
 		};
 		61E270B6CE984C7DBB34CC008357A53F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2451,17 +2465,17 @@
 			target = BF14B4D73A8B65413F1CD575C700DF56 /* YJNetManager */;
 			targetProxy = 09AA047345C81FAFDB9AFCB844BC0970 /* PBXContainerItemProxy */;
 		};
-		9B7534985CCD63F455F60C75D0CD2264 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LGAlertHUD;
-			target = 918CD8C53721EE1BF698E5C3B955D42A /* LGAlertHUD */;
-			targetProxy = AC6B78827D9054411C077603DF462F75 /* PBXContainerItemProxy */;
-		};
 		A44F92C914FDBF56E631C870255B97E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LGLog;
 			target = 7D4990D63E32ED3D2AD8F5B80802F42E /* LGLog */;
 			targetProxy = D999BBB57C5DBB577DCC7B33EB62B32D /* PBXContainerItemProxy */;
+		};
+		AB811EFB8F901DCC4A19A962D053F320 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YJNetManager;
+			target = BF14B4D73A8B65413F1CD575C700DF56 /* YJNetManager */;
+			targetProxy = 65A5225D236A96596F48DB17DA9F37F1 /* PBXContainerItemProxy */;
 		};
 		C537246DD6AB9231EC71C9158853B1AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2469,11 +2483,23 @@
 			target = D38AEB5C6E0729E9103F7A01A85A3864 /* YJExtensions */;
 			targetProxy = C25155199DC1CE439AD5070C6667E714 /* PBXContainerItemProxy */;
 		};
+		C5EEDF888F7806036E6F33004B56ADFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
+			targetProxy = 568177165984E66F85306F420C9335B7 /* PBXContainerItemProxy */;
+		};
 		C6057A802E15A8CF29AC36A4A2900015 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Reachability;
 			target = CAA047C0F5E4106F3904E8497FA17F97 /* Reachability */;
 			targetProxy = 2C4753122F50C28507D9ED2988F078A3 /* PBXContainerItemProxy */;
+		};
+		D5947B7C70B68B62D11A6CA56491C398 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YJExtensions;
+			target = D38AEB5C6E0729E9103F7A01A85A3864 /* YJExtensions */;
+			targetProxy = B105A53C5459B58AEF64462E4DCEB821 /* PBXContainerItemProxy */;
 		};
 		D8593D6D81EDF80618F53A850F502410 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2486,18 +2512,6 @@
 			name = YJExtensions;
 			target = D38AEB5C6E0729E9103F7A01A85A3864 /* YJExtensions */;
 			targetProxy = A792BDF201A43C7E61D43DD42D50F48A /* PBXContainerItemProxy */;
-		};
-		E848B62CFB1296531E65E7B0ED8C506F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MJExtension;
-			target = 4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */;
-			targetProxy = 36392F220D7564DB198A39F57671DB46 /* PBXContainerItemProxy */;
-		};
-		F026C0D64A1173F9B4F82850580FD627 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YJExtensions;
-			target = D38AEB5C6E0729E9103F7A01A85A3864 /* YJExtensions */;
-			targetProxy = F79ED1E731A3C70F1B932A101F49C1DA /* PBXContainerItemProxy */;
 		};
 		F14818295DD86E40F4C9E1E1609D186E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2539,6 +2553,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		17C1765FC723095E21623F5694651233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0731DF9D6E43C8FFA6A5EE199FF97FB4 /* YJTaskMark.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YJTaskMark/YJTaskMark-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YJTaskMark/YJTaskMark-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YJTaskMark/YJTaskMark.modulemap";
+				PRODUCT_MODULE_NAME = YJTaskMark;
+				PRODUCT_NAME = YJTaskMark;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2853,36 +2898,6 @@
 			};
 			name = Debug;
 		};
-		A3F48ACE1C1D4598AD4C0847CA39EBCC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E8BA88C97E41201246DE00960A3273F /* YJTaskMark.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YJTaskMark/YJTaskMark-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YJTaskMark/YJTaskMark-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YJTaskMark/YJTaskMark.modulemap";
-				PRODUCT_MODULE_NAME = YJTaskMark;
-				PRODUCT_NAME = YJTaskMark;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		AA26E281B12ABCE64152DDCA0AC72498 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 698E1712E708D1804CE92F5596F1DAF9 /* AFNetworking.release.xcconfig */;
@@ -3037,37 +3052,6 @@
 			};
 			name = Release;
 		};
-		CC90B34011EC5D3EE74446C4FBF4E805 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0731DF9D6E43C8FFA6A5EE199FF97FB4 /* YJTaskMark.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YJTaskMark/YJTaskMark-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YJTaskMark/YJTaskMark-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YJTaskMark/YJTaskMark.modulemap";
-				PRODUCT_MODULE_NAME = YJTaskMark;
-				PRODUCT_NAME = YJTaskMark;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		D05275C8A461D2A0FA74AFADE03A54C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8F95D2CA9DCE335DD0AA091424028CD8 /* Masonry.debug.xcconfig */;
@@ -3149,6 +3133,36 @@
 				MODULEMAP_FILE = "Target Support Files/YJExtensions/YJExtensions.modulemap";
 				PRODUCT_MODULE_NAME = YJExtensions;
 				PRODUCT_NAME = YJExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E3E0562621BD6E8303D2AE031F6E93AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8BA88C97E41201246DE00960A3273F /* YJTaskMark.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YJTaskMark/YJTaskMark-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YJTaskMark/YJTaskMark-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YJTaskMark/YJTaskMark.modulemap";
+				PRODUCT_MODULE_NAME = YJTaskMark;
+				PRODUCT_NAME = YJTaskMark;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -3271,15 +3285,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18F375B24CE0E542772E83DBB22905D5 /* Build configuration list for PBXNativeTarget "YJTaskMark" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3F48ACE1C1D4598AD4C0847CA39EBCC /* Debug */,
-				CC90B34011EC5D3EE74446C4FBF4E805 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		254159CA185CFF6411D1B30CCEB96B6A /* Build configuration list for PBXNativeTarget "LGLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3303,6 +3308,15 @@
 			buildConfigurations = (
 				A2A629A03DFF1B6061EDF3973A1106CD /* Debug */,
 				9F10C5CC4DCD4C2EAA2D89E46DB6D3FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EFDBC312E4332FC78D7C5385F736D5C /* Build configuration list for PBXNativeTarget "YJTaskMark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3E0562621BD6E8303D2AE031F6E93AF /* Debug */,
+				17C1765FC723095E21623F5694651233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
