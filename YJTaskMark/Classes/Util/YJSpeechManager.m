@@ -9,7 +9,7 @@
 #import "YJSpeechManager.h"
 
 #import <YJNetManager/YJNetMonitoring.h>
-
+#import <YJNetManager/YJNetManager.h>
 #import <LGAlertHUD/LGAlertHUD.h>
 #import <YJExtensions/YJExtensions.h>
 #import <AVFoundation/AVFoundation.h>
@@ -19,14 +19,17 @@
 #import "YJSpeechFileManager.h"
 #import "YJSpeechSingModel.h"
 
+#include <ifaddrs.h>
+#include <arpa/inet.h>
+#import <CommonCrypto/CommonDigest.h>
+
 #define YJS_IsStrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]))
 #define YJS_IsArrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref) count] == 0))
 #define IsObjEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]))
 #define kApiParams(_ref)    (IsObjEmpty(_ref) ? @"" : _ref)
 static NSString *cMicAuthorization = @"micAuthorization";
-static NSString *cSpeechAppkey = @"t714";
-static NSString *cSpeechSecretkey = @"bPSj0QFufvC6OB9yRthr81aLH3pedmED";
-static NSString *cSpeechUserID = @"lancooios001";
+static NSString *cSpeechAppkey = @"a714";
+static NSString *cSpeechSecretkey = @"qdaRxXYKwE5lIt9HTfrLOj8CW2kyBZcF";
 
 static CGFloat kFrontTimet = 5;
 static CGFloat kBackTime = 20;
@@ -44,6 +47,7 @@ static CGFloat kSoundOffset = 8;
 @property (nonatomic,copy) void (^speechResultBlock) (YJSpeechResultModel *resultModel);
 @property (nonatomic,copy) void (^soundIntensityBlock) (CGFloat sound,CGFloat silentTime);
 @property (nonatomic,copy) void (^speechStartBlock) (void);
+@property (nonatomic,copy) void (^speechErrorBlock) (NSString *errorMsg);
 /**
  当连续评测前，先强制关闭上次的，再开始下一次，但不输出上次评测结果
  */
@@ -119,26 +123,30 @@ static CGFloat kSoundOffset = 8;
     [SSOralEvaluatingManager shareManager].delegate = self;
     
     [SSOralEvaluatingManager registerEvaluatingManagerConfig:managerConfig];
-    [[SSOralEvaluatingManager shareManager] registerEvaluatingType:OralEvaluatingTypeLine];
+    [[SSOralEvaluatingManager shareManager] registerEvaluatingType:OralEvaluatingTypeLine userId:[YJNetManager defaultManager].userID];
     
 }
 /**
     正式：http://api.cloud.ssapi.cn:8080/auth/authorize
     测试：http://trial.cloud.ssapi.cn:8080/auth/authorize
  */
+- (void)updateWarrntIdAuth{
+    self.isInit = NO;
+    [self getWarrntIdAuth];
+}
 -(void)getWarrntIdAuth{
     if (self.isInit) {
         return;
     }
     NSString *timestamp = [NSString stringWithFormat:@"%.f",[[NSDate date] timeIntervalSince1970]];
-    NSString *user_client_ip = @"192.168.129.37";
-    NSString *signStr = [NSString stringWithFormat:@"app_secret=%@&appid=%@&timestamp=%@&user_client_ip=%@&user_id=%@",cSpeechSecretkey,cSpeechAppkey,timestamp,user_client_ip,cSpeechUserID];;
+    NSString *user_client_ip = [self getUserIP];
+    NSString *signStr = [NSString stringWithFormat:@"app_secret=%@&appid=%@&timestamp=%@&user_client_ip=%@&user_id=%@",cSpeechSecretkey,cSpeechAppkey,timestamp,user_client_ip,[YJNetManager defaultManager].userID];;
     NSString *signature = [NSString yj_md5EncryptStr:signStr];
-    NSURL * url = [NSURL URLWithString:@"http://trial.cloud.ssapi.cn:8080/auth/authorize"];
+    NSURL * url = [NSURL URLWithString:@"http://api.cloud.ssapi.cn:8080/auth/authorize"];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
     request.timeoutInterval = 10;
     [request setHTTPMethod:@"POST"];
-    NSString * argument = [NSString stringWithFormat:@"appid=%@&timestamp=%@&user_id=%@&user_client_ip=%@&request_sign=%@&warrant_available=%li",cSpeechAppkey,timestamp,cSpeechUserID,user_client_ip,signature,(long)12*3600];
+    NSString * argument = [NSString stringWithFormat:@"appid=%@&timestamp=%@&user_id=%@&user_client_ip=%@&request_sign=%@&warrant_available=%li",cSpeechAppkey,timestamp,[YJNetManager defaultManager].userID,user_client_ip,signature,(long)12*3600];
     request.HTTPBody = [argument dataUsingEncoding:NSUTF8StringEncoding];
     __weak typeof(self) weakSelf = self;
     NSURLSessionDataTask * task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -170,14 +178,52 @@ static CGFloat kSoundOffset = 8;
     }];
     [task resume];
 }
+- (NSString*)getUserIP {
+    NSString *address = @"error";
+    struct ifaddrs *interfaces = NULL;
+    struct ifaddrs *temp_addr = NULL;
+    int success = 0;
+     
+    // retrieve the current interfaces - returns 0 on success
+    success = getifaddrs(&interfaces);
+    if (success == 0) {
+        // Loop through linked list of interfaces
+        temp_addr = interfaces;
+        while (temp_addr != NULL) {
+            if( temp_addr->ifa_addr->sa_family == AF_INET) {
+                // Check if interface is en0 which is the wifi connection on the iPhone
+                if ([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
+                    // Get NSString from C String
+                    address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                }
+            }
+             
+            temp_addr = temp_addr->ifa_next;
+        }
+    }
+     
+    // Free memory
+    freeifaddrs(interfaces);
+     
+    return address;
+}
 - (BOOL)isInitEngine{
     return self.isInit;
 }
-
 - (void)startEngineAtRefText:(NSString *)refText markType:(YJSpeechMarkType)markType{
+    [self startEngineAtRefText:refText markType:markType symbol:YES errorResult:nil];
+}
+- (void)startEngineAtRefText:(NSString *)refText markType:(YJSpeechMarkType)markType errorResult:(void (^)(NSString *))errorResult{
+    [self startEngineAtRefText:refText markType:markType symbol:YES errorResult:errorResult];
+}
+- (void)startEngineAtRefText:(NSString *)refText markType:(YJSpeechMarkType)markType symbol:(BOOL)symbol{
+    [self startEngineAtRefText:refText markType:markType symbol:symbol errorResult:nil];
+}
+- (void)startEngineAtRefText:(NSString *)refText markType:(YJSpeechMarkType)markType symbol:(BOOL)symbol errorResult:(void (^)(NSString *))errorResult{
    if (self.speechStartBlock) {
        self.speechStartBlock();
    }
+    _speechErrorBlock = errorResult;
     self.markType = markType;
     self.refText = refText;
     self.isMarking = YES;
@@ -197,7 +243,8 @@ static CGFloat kSoundOffset = 8;
         return;
     }
     if ([YJNetMonitoring shareMonitoring].networkCanUseState != 1) {
-        [self showResult:@"网络异常"];
+        [[YJNetMonitoring shareMonitoring] checkNetCanUseWithComplete:nil];
+        [self showResult:@"网络无法正常访问"];
         return;
     }
      [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
@@ -205,9 +252,16 @@ static CGFloat kSoundOffset = 8;
     //初始化参数
         SSOralEvaluatingConfig *config = [[SSOralEvaluatingConfig alloc]init];
         // 设置用户id
-        config.userId = cSpeechUserID;
+        config.userId = [YJNetManager defaultManager].userID;
     if (self.markType == YJSpeechMarkTypeLocalEnASR || self.markType == YJSpeechMarkTypeLocalCnASR) {
+        AVAsset *asset = [AVAsset assetWithURL:[NSURL fileURLWithPath:refText]];
+        CMFormatDescriptionRef des = (__bridge CMFormatDescriptionRef)(asset.tracks.firstObject.formatDescriptions.firstObject);
+        Float64 mSampleRate = CMAudioFormatDescriptionGetStreamBasicDescription(des)->mSampleRate;
+        if (mSampleRate > 16000) {
+            config.sampleRate = mSampleRate;
+        }
         config.coreType = self.markType == YJSpeechMarkTypeLocalEnASR ? @"en.longsent.rec" : @"cn.longsent.rec";
+        config.feedTime = 0.02;
         NSString *extName = [refText pathExtension];
         config.audioType = extName.lowercaseString;
          [LGAlert showIndeterminateWithStatus:@"语音识别中..."];
@@ -236,6 +290,8 @@ static CGFloat kSoundOffset = 8;
             default:
                 break;
         }
+        // 是否开放标点符号
+        config.openSymbol = symbol;
         // 设置音频格式,默认wav
         config.audioType = @"wav";
         // 设置音频格式-采样率,默认16000
@@ -258,9 +314,9 @@ static CGFloat kSoundOffset = 8;
         config.recordTimeinterval = 50;
         //开始评测
         [[SSOralEvaluatingManager shareManager] startEvaluateOralWithConfig:config];
-        if (self.markType != YJSpeechMarkTypeASR && self.markType != YJSpeechMarkTypeChineseASR) {
-            [self startTimer];
-        }
+//        if (self.markType != YJSpeechMarkTypeASR && self.markType != YJSpeechMarkTypeChineseASR) {
+//        }
+        [self startTimer];
     }
 }
 - (BOOL)isSpeechMarking{
@@ -269,15 +325,22 @@ static CGFloat kSoundOffset = 8;
 - (void)showResult:(NSString *) result{
      [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
    YJSpeechResultModel *model = [[YJSpeechResultModel alloc] init];
-    model.isError = YES;
-    model.errorMsg = result;
+    if ((self.markType == YJSpeechMarkTypeLocalEnASR || self.markType == YJSpeechMarkTypeLocalCnASR) && [[NSFileManager defaultManager] fileExistsAtPath:self.refText]) {
+        model.audioPath = self.refText;
+        model.isError = NO;
+    }else{
+        model.isError = YES;
+        model.errorMsg = result;
+    }
     model.totalScore = 0;
     self.isMarking = NO;
     self.isEndMark = NO;
     if (self.speechResultBlock) {
         self.speechResultBlock(model);
     }
-    
+    if (self.speechErrorBlock) {
+        self.speechErrorBlock(result);
+    }
 }
 
 - (void)stopEngine{
@@ -327,9 +390,7 @@ static CGFloat kSoundOffset = 8;
 }
 // 评测停止
 -(void)oralEvaluatingDidStop{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [LGAlert hide];
-    });
+    
 }
 
 -(void)oralEvaluatingDidEndWithResult:(NSDictionary*)result RequestId:(NSString*)request_id{
@@ -371,6 +432,7 @@ static CGFloat kSoundOffset = 8;
                        NSMutableDictionary *bigDic = [NSMutableDictionary dictionary];
                        [bigDic setObject:kApiParams(detailModel.charStr) forKey:@"word"];
                        [bigDic setObject:@{@"overall":@(detailModel.score)} forKey:@"scores"];
+                       [words addObject:bigDic];
                    }
                    model.words = words;
                    model.wordScore = singModel.result.senWordScore;
@@ -420,14 +482,19 @@ static CGFloat kSoundOffset = 8;
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
         [LGAlert hide];
+        
         if (error.userInfo && [[error.userInfo objectForKey:@"error"] containsString:@"audio type is not supported"]) {
             [weakSelf showResult:@"该音频格式不支持"];
-        } else if (error.userInfo && [[error.userInfo objectForKey:@"error"] containsString:@"no warrant provided"]){
+        }else if (error.userInfo && [[error.userInfo objectForKey:@"error"] containsString:@"connect to server failed"]){
+            [weakSelf showResult:@"网络连接失败"];
+        }else if (error.userInfo && [[error.userInfo objectForKey:@"error"] containsString:@"conection is timeout failed"]){
+            [weakSelf showResult:@"语音评测超时"];
+        }else if (error.userInfo && [[error.userInfo objectForKey:@"error"] containsString:@"warrant"]){
             weakSelf.isInit = NO;
             [weakSelf getWarrntIdAuth];
-            [weakSelf showResult:@"操作失败"];
+            [weakSelf showResult:@"语音服务启动失败，请检查网络是否连接正常或尝试连接其他网络"];
         }else{
-            [weakSelf showResult:@"操作失败"];
+            [weakSelf showResult:@"语音评测失败，请检查网络是否连接正常或尝试连接其他网络"];
         }
     });
     NSLog(@"评测失败回调2:error:%@",error);

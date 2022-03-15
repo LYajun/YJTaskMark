@@ -79,6 +79,11 @@ typedef NS_ENUM(NSInteger, offLineSource) {
 @property (nonatomic,assign) NSInteger offLineSource;
 
 /**
+ 离线资源解压全路径，默认 [NSBundle mainBundle] 的 SingSound.Bundle 里面
+ */
+@property (nonatomic, copy) NSString * resourcePath;
+
+/**
  设置为YES后，开启异步测评
  默认不开启此字段，且只支持在线测评 不支持切换题型
  */
@@ -106,5 +111,13 @@ typedef NS_ENUM(NSInteger, offLineSource) {
  验证服务
  */
 @property (nonatomic, copy) NSString * authenServer;
+
+/**
+ 地址黑名单
+ */
+@property (nonatomic, strong) NSArray * badServers;
+
+@property(nonatomic, assign) BOOL openControl;//是否开启设备管控
+
 
 @end

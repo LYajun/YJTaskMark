@@ -38,12 +38,36 @@ typedef NS_ENUM(NSInteger, OralEvaluatingType) {
  */
 + (void)registerEvaluatingManagerConfig:(SSOralEvaluatingManagerConfig *)config;
 
+
+///  注册全局评测模式
+/// @param type 评测模式
+/// @param userId userId（必传）
+- (void)registerEvaluatingType:(OralEvaluatingType)type userId:(NSString *)userId;
+
 /**
  注册全局评测模式
 
  @param type 评测模式
  */
-- (void)registerEvaluatingType:(OralEvaluatingType)type;
+- (void)registerEvaluatingType:(OralEvaluatingType)type __attribute__((deprecated("建议使用 registerEvaluatingType:(OralEvaluatingType)type userId:(NSString *)userId")));
+
+
+/// 注册全局评测模式和初始化参数
+/// @param config 初始化参数
+/// @param type 评测模式
+/// @param userId userId（必传）
+-(void)registerWithConfig:(SSOralEvaluatingManagerConfig *)config type:(OralEvaluatingType)type userId:(NSString *)userId;
+
+/// 注册全局评测模式和初始化参数
+/// @param config 初始化参数
+/// @param type 评测模式
+-(void)registerWithConfig:(SSOralEvaluatingManagerConfig *)config type:(OralEvaluatingType)type __attribute__((deprecated("建议使用 registerWithConfig:(SSOralEvaluatingManagerConfig *)config type:(OralEvaluatingType)type userId:(NSString *)userId")));
+
+/// 注册全局评测模式和初始化参数
+/// @param config 初始化参数
+/// @param type 评测模式
+/// @param userId userId（必传）
+- (instancetype)initWithManagerConfig:(SSOralEvaluatingManagerConfig *)config type:(OralEvaluatingType)type userId:(NSString *)userId;
 
 /**
  初始化对象
@@ -52,7 +76,7 @@ typedef NS_ENUM(NSInteger, OralEvaluatingType) {
  @param type 评测模式
  @return 对象
  */
-- (instancetype)initWithManagerConfig:(SSOralEvaluatingManagerConfig *)config type:(OralEvaluatingType)type;
+- (instancetype)initWithManagerConfig:(SSOralEvaluatingManagerConfig *)config type:(OralEvaluatingType)type __attribute__((deprecated("建议使用 initWithManagerConfig:(SSOralEvaluatingManagerConfig *)config type:(OralEvaluatingType)type userId:(NSString *)userId")));
 
 /**
  开始评测
@@ -117,7 +141,21 @@ typedef NS_ENUM(NSInteger, OralEvaluatingType) {
                          AppKey:(NSString *)appkey
                            Path:(NSString *)path
                        compelet:(void (^)(NSInteger code, NSString * task_id))block;
+/**
+// 上传本地日志
+// @param uid       用户唯一标识
+// @param appkey    账号
+// @param path      本地日志路径，要与初始化时logPath一致
+// @param block     上传回调(code状态值，0:上传成功  ，1:文件正在上传中  ，2:文件不存在  ，3:文件内容为空  ，4:上传失败  ，5:读文件出错)
+// @param para     额外的参数
+//
+// */
+//+(void)uploadLocalLogWithUserID:(NSString *)uid
+//                         AppKey:(NSString *)appkey
+//                           Path:(NSString *)path
+//                       compelet:(void (^)(NSInteger code, NSString * task_id))block para:(NSDictionary *)para;
 
+//+(void)uploadLightLog:(NSString *)log AppKey:(NSString *)appkey compelet:(void (^)(NSInteger, NSString *))block;
 /**
  清除所有录音文件（只针对调用startEvaluateOralWithConfig:(SSOralEvaluatingConfig *)config)
 
@@ -148,6 +186,7 @@ typedef NS_ENUM(NSInteger, OralEvaluatingType) {
  @param timeout     过期时间戳
  */
 - (void)setAuthInfoWithWarrantId:(NSString *)warrant_id AuthTimeout:(NSString *)timeout;
+
 
 @end
 

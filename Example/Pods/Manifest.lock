@@ -56,7 +56,7 @@ PODS:
     - LGLog
     - Reachability
     - YJExtensions
-  - YJTaskMark (2.0.2):
+  - YJTaskMark (2.0.5):
     - LGAlertHUD
     - MJExtension
     - YJExtensions
@@ -89,8 +89,8 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   YJExtensions: b02c849ffe62650cec815854c9362031d3034650
   YJNetManager: 2de45698355adda77563015b1bf884d468a688db
-  YJTaskMark: 9550b1df41401c7468245776fbd51162878c7d96
+  YJTaskMark: 00a4948afb13210b13362a540b878682cd1eb4b1
 
-PODFILE CHECKSUM: d33a6c42ff87ac2b6b136d38888ba022625d0f1e
+PODFILE CHECKSUM: 09391a725d9782e2ee21c5e3107aa3a3d26a2fb7
 
-COCOAPODS: 1.9.2
+COCOAPODS: 1.11.2

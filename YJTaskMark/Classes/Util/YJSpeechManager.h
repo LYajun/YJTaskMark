@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger,YJSpeechMarkType) {
 - (void)initEngine;
 - (BOOL)isInitEngine;
 /** 进行授权 */
-- (void)getWarrntIdAuth;
+- (void)updateWarrntIdAuth;
 /** 初始化结果 */
 - (void)initResult:(void (^) (BOOL success))resultBlock;
 
@@ -55,8 +55,10 @@ typedef NS_ENUM(NSInteger,YJSpeechMarkType) {
  @param refText 参考语音文本
  @param markType 评测类型
  */
-- (void)startEngineAtRefText:(NSString *)refText
-                    markType:(YJSpeechMarkType)markType;
+- (void)startEngineAtRefText:(NSString *)refText markType:(YJSpeechMarkType)markType;
+- (void)startEngineAtRefText:(NSString *)refText markType:(YJSpeechMarkType)markType errorResult:(void (^) (NSString *errorMsg))errorResult;
+- (void)startEngineAtRefText:(NSString *)refText markType:(YJSpeechMarkType)markType symbol:(BOOL)symbol;
+- (void)startEngineAtRefText:(NSString *)refText markType:(YJSpeechMarkType)markType symbol:(BOOL)symbol errorResult:(void (^) (NSString *errorMsg))errorResult;
 /** 是否评测中 */
 - (BOOL)isSpeechMarking;
 

@@ -48,6 +48,10 @@ typedef NS_ENUM(NSInteger, MixedType) {
     MixedTypeOnline,   //强制使用在线
     MixedTypeOffline,   //强制使用离线
 };
+typedef NS_ENUM(NSInteger, ConfigOutputAudioType) {
+    ConfigOutputAudioTypeDefault,   //wav
+    ConfigOutputAudioTypeMp3,   //mp3
+};
 
 @class SSOralEvaluatingAnswer;
 
@@ -128,7 +132,7 @@ typedef NS_ENUM(NSInteger, MixedType) {
 @property (nonatomic, copy) NSString * stdAudioUrl;
 
 /**
- 用户ID(非必选 default:@"this-is-user-id"）
+ 用户ID(必选 default:@"this-is-user-id"）
  */
 @property (nonatomic, copy) NSString *userId;
 
@@ -261,9 +265,9 @@ typedef NS_ENUM(NSInteger, MixedType) {
 @property (nonatomic, assign) BOOL soundIntensityEnable;
 
 /**
- 是否启用同步进行音频文件移动(默认关闭)
+ 是否启用同步进行音频文件移动(默认开启同步) 注： 已废弃
  */
-@property (nonatomic, assign) BOOL syncFile;
+@property (nonatomic, assign) BOOL syncFile __attribute__((deprecated("已废弃")));
 
 /**：
  是否移除本地音频测评的音频头，wav格式默认移除
@@ -289,8 +293,20 @@ typedef NS_ENUM(NSInteger, MixedType) {
  返回音频播放链接协议类型（默认http）
  */
 @property (nonatomic, copy) NSString * audioUrlScheme;
+/**
+ 输出音频文件类型
+ */
+
+@property (nonatomic, assign) ConfigOutputAudioType outputType;
 
 @property (nonatomic, assign) BOOL evalStability;
+
+/**
+ 参数request
+ */
+@property (nonatomic, strong) NSDictionary * request;
+
+
 
 @end
 
