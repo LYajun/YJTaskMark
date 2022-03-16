@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YJTaskMark'
-  s.version          = '2.0.6'
+  s.version          = '2.0.7'
   s.summary          = '基于先声的语音评测工具'
 
 
@@ -38,7 +38,7 @@ TODO: Add long description of the pod here.
       s.vendored_frameworks =  'YJTaskMark/Classes/Lib/*.framework'
  # s.frameworks  = 'Foundation'
       s.libraries   = 'z.1.1.3','z.1','z','c++'
-
+      s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 
 
 
